@@ -1,0 +1,91 @@
+{
+  "cells": [
+    {
+      "accuracy": 0.74,
+      "dataset": "ARC-Challenge",
+      "mean_input_tokens": 90.49,
+      "mean_seconds": 0.043222292521968485,
+      "n": 100,
+      "p95_seconds": 0.04647049778141081,
+      "peak_memory_gb": 3.603007576,
+      "precision": 16
+    },
+    {
+      "accuracy": 0.82,
+      "dataset": "ARC-Easy",
+      "mean_input_tokens": 84.01,
+      "mean_seconds": 0.04231469419784844,
+      "n": 100,
+      "p95_seconds": 0.04614261215319857,
+      "peak_memory_gb": 3.583019096,
+      "precision": 16
+    },
+    {
+      "accuracy": 0.72,
+      "dataset": "ARC-Challenge",
+      "mean_input_tokens": 90.49,
+      "mean_seconds": 0.07453915542457253,
+      "n": 100,
+      "p95_seconds": 0.08711584383854643,
+      "peak_memory_gb": 2.145568944,
+      "precision": 8
+    },
+    {
+      "accuracy": 0.82,
+      "dataset": "ARC-Easy",
+      "mean_input_tokens": 84.01,
+      "mean_seconds": 0.07123223710339516,
+      "n": 100,
+      "p95_seconds": 0.08688734399620443,
+      "peak_memory_gb": 2.148403376,
+      "precision": 8
+    },
+    {
+      "accuracy": 0.64,
+      "dataset": "ARC-Challenge",
+      "mean_input_tokens": 90.49,
+      "mean_seconds": 0.07397112459642813,
+      "n": 100,
+      "p95_seconds": 0.08657455601496622,
+      "peak_memory_gb": 1.285343408,
+      "precision": 4
+    },
+    {
+      "accuracy": 0.83,
+      "dataset": "ARC-Easy",
+      "mean_input_tokens": 84.01,
+      "mean_seconds": 0.07089100372279063,
+      "n": 100,
+      "p95_seconds": 0.08702106074197218,
+      "peak_memory_gb": 1.288161456,
+      "precision": 4
+    }
+  ],
+  "conservative_two_model_hours": 0.6693552185354636,
+  "identity": {
+    "config": "d8e17e55cb66c0441b1db4846b161fc58584facef4438411eb9de1d4abfe4593",
+    "environment": {
+      "machine": "arm64",
+      "packages": {
+        "datasets": "4.8.5",
+        "huggingface-hub": "1.32.0",
+        "matplotlib": "3.10.8",
+        "mlx": "0.32.3",
+        "mlx-lm": "0.31.3",
+        "numpy": "2.4.3",
+        "quantization-audit": "0.1.0",
+        "scipy": "1.17.1",
+        "transformers": "5.18.0"
+      },
+      "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+      "python": "3.13.5"
+    },
+    "pins": "86ea5938bd2fa35b1dd49e8d7aeb6d6b87bf7dd936784839206b3016095ce7f9",
+    "scoring_source": "65150019f51cda2c755b97000f1e0dc47bedb04da4873f736ad6eebc9895501b",
+    "splits": "50796901816346367c42ff82d978f1865ce428dec339289e2d76a8fb6f82eab1"
+  },
+  "passed": true,
+  "projected_primary_hours": 0.3346776092677318,
+  "reasons": [],
+  "role": "replication"
+}
