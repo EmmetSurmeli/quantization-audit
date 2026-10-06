@@ -118,12 +118,13 @@ def analyze(workspace,out):
                         # At n=400 all ten subsets coincide: do not pretend ten repeats add information.
                         for seed,order in enumerate(suborders[:1] if n==len(cy) else suborders):
                             idx=order[:n]
-                            t0=fit_temperature(cal_ref[idx],cal_y[idx],cfg["temperature_bounds"])["temperature"]
-                            t1=fit_temperature(clogits[idx],cy[idx],cfg["temperature_bounds"])["temperature"]
-                            for treatment,temp in (("transferred",t0),("refitted",t1)):
+                            f0=fit_temperature(cal_ref[idx],cal_y[idx],cfg["temperature_bounds"])
+                            f1=fit_temperature(clogits[idx],cy[idx],cfg["temperature_bounds"])
+                            for treatment,fit in (("transferred",f0),("refitted",f1)):
+                                temp=fit["temperature"]
                                 m=metrics(tlogits,ty,temp)
                                 curves.append({"model":role,"dataset":dataset,"bits":bits,"n_calibration":n,"subset_seed":seed,
-                                               "treatment":treatment,"temperature":temp,"test_brier":m["brier"]})
+                                               "treatment":treatment,"temperature":temp,"at_boundary":fit["at_boundary"],"test_brier":m["brier"]})
                     if role=="primary" and dataset=="ARC-Challenge" and bits==4:
                         primary=bootstrap_transfer(cal_ref,clogits,cy,tlogits,ty,reps=cfg["bootstrap_replicates"],
                                                    seed=cfg["seed"],bounds=cfg["temperature_bounds"])
@@ -138,8 +139,8 @@ def analyze(workspace,out):
                             for r in stable_order(candidates,cfg["seed"],"error-analysis")[:5]:
                                 i=r.pop("_index")
                                 examples.append(dict(r,category=name,reference_prediction=int(ref_pred[i]),quantized_prediction=int(qp[i]),
-                                                     reference_probabilities=probabilities(ref_logits[[i]],treatments["transferred"])[0].tolist(),
-                                                     quantized_probabilities=probabilities(tlogits[[i]],treatments["refitted"])[0].tolist()))
+                                                     reference_probabilities=probabilities(ref_logits[[i]],treatments["transferred"])[0,:len(r['choices'])].tolist(),
+                                                     quantized_probabilities=probabilities(tlogits[[i]],treatments["refitted"])[0,:len(r['choices'])].tolist()))
                     rr,rrecords,rlogits,ry=load_cell(ws,store,role,bits,dataset,"robustness")
                     originals={r["key"]:i for i,r in enumerate(rows)}
                     indices=[originals[r["key"]] for r in rr]
@@ -151,7 +152,8 @@ def analyze(workspace,out):
                                        "paired_brier_change":b["brier"]-a["brier"],"original_accuracy":a["accuracy"],"permuted_accuracy":b["accuracy"]})
     result={"status":"measured","primary":primary,"metrics":metric_rows,"sample_size_curves":curves,
             "flips":flips,"resources":resources,"robustness":robust,"details":details,"error_cases":examples,
-            "protocol":frozen,"analysis_source":source_hash(),"analysis_environment":environment(),"limitations":[
+            "protocol":frozen,"split_amendment":(ws/'amendment-pretest-migration.json').exists(),
+            "analysis_source":source_hash(),"analysis_environment":environment(),"limitations":[
                 "Two related ARC subsets; at most two sizes of one model family.",
                 "Closed-choice scores, not free-form reliability or reasoning quality.",
                 "MLX affine weight quantization only; pretraining contamination unresolved.",
@@ -231,7 +233,8 @@ def write_report(result,out):
           "The bootstrap resamples calibration and test questions independently, retains pairing across treatments, and refits temperatures. Brier score measures probability quality, not calibration alone. Positive temperature scaling cannot change the selected option.","",
           "## Methods","",
           "Official Qwen3 checkpoints were converted to BF16 and MLX affine 8/4-bit weight quantization with group size 64. One model is loaded at a time. Scores are obtained with thinking disabled, identical prompt tokens across precisions, and verified single-token option labels. Probabilities are conditional on the available choices.","",
-          "For each ARC subset, 100 training questions are reserved for the pilot, 400 disjoint training questions for calibration, and 100 validation questions for pipeline checks. The protocol is frozen before accessing test scores. Content and ID overlap are checked before selection. The primary test is the complete ARC-Challenge test split.","",
+          "For each ARC subset, 100 training questions are reserved for the pilot, 400 disjoint training questions for calibration, and 100 validation questions for pipeline checks. Content, normalized question-stem, and ID overlap are checked across official splits. The primary test is the complete ARC-Challenge test split.","",
+          ("Protocol timing: an initial freeze preceded test scoring. A data-only stem-overlap correction was made before any held-out performance summary was inspected; calibration was refitted and frozen anew. Unchanged raw scores acquired under the initial protocol were reused with per-record provenance. See docs/PROTOCOL-AMENDMENT.md." if result['split_amendment'] else "The protocol and calibration were frozen before held-out scoring."),"",
           "## Results","","| Model | Dataset | Bits | Treatment | Accuracy | Brier | NLL | ECE |","|---|---|---:|---|---:|---:|---:|---:|"]
     for r in result["metrics"]:
         rows.append(f"| {r['model']} | {r['dataset']} | {r['bits']} | {r['treatment']} | {r['accuracy']:.4f} | {r['brier']:.4f} | {r['nll']:.4f} | {r['ece']:.4f} |")

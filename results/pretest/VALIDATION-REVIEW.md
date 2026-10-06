@@ -1,6 +1,6 @@
 # Validation review before held-out scoring
 
-Both pilots passed. All calibration temperatures are interior to the fixed [0.05,20] bounds. Each precision used the same prompt-token hashes and option mapping. No test scores existed when this review was written.
+Both pilots passed. All calibration temperatures are interior to the fixed [0.05,20] bounds. Each precision used the same prompt-token hashes and option mapping. No test scores exist in the corrected workspace at this freeze. Earlier raw test scores, collected under version 1, will be reused after the corrected freeze. No held-out performance summary informed the amendment.
 
 | Model | Dataset | Bits | Validation n | Accuracy | Mean outside-choice mass |
 |---|---|---:|---:|---:|---:|
@@ -22,3 +22,6 @@ The 1.7B 4-bit variant has lower validation accuracy. Retain it as an observed q
 Five primary BF16 pilot questions were inspected directly for question text, original option labels, canonical gold index, and model choice. Label mapping agreed; no prompt or scoring change was made after examining validation.
 
 Protocol, revisions, split IDs, and both fitted calibration artifacts are hashed in frozen.json. The upcoming primary comparison remains 4B / ARC-Challenge / 4-bit / n=400, irrespective of the result.
+
+
+Version 2: both validation sets are unchanged. Calibration was refitted on the corrected pools; all 400-example temperatures remain interior to the bounds. There is zero calibration/test normalized-stem overlap. See docs/PROTOCOL-AMENDMENT.md for the full timing and reuse disclosure.

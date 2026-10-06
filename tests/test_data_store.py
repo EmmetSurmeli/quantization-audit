@@ -41,6 +41,17 @@ def test_bad_label_rejected():
         canonical_row(r,"D")
 
 
+def test_repeated_stem_with_changed_distractors_cannot_cross_splits():
+    a=raw(90,"The same question?")
+    variant=raw(91,"the same question?")
+    variant["choices"]["text"][0]="different distractor"
+    cfg={"datasets":["D"],"seed":3,"counts":{"pilot":1,"calibration":2,"validation":1,"robustness":1}}
+    source={"D":{"test":[a],"validation":[raw(80)],"train":[variant]+[raw(i) for i in range(5)]}}
+    splits,excluded=build_splits(source,cfg)
+    assert {"key":"D:91","split":"train","reason":"cross_split_question_stem"} in excluded
+    assert len(splits["D"]["test"])==1
+
+
 def test_resume_is_exactly_once_and_immutable(tmp_path):
     path=tmp_path/"s.sqlite"
     with ScoreStore(path) as store:

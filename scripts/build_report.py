@@ -138,7 +138,9 @@ def build(results,provenance):
           '400 different training questions to calibration, and 100 validation questions to pre-test checks. '
           f'Global ID/content screening excluded {len(splits["exclusions"])} duplicate records; all 1,172 Challenge '
           'and 2,376 Easy test questions remain. The 200-question permutation subset per task is chosen deterministically. '
-          'Both models passed the pilot. Protocol and calibration were committed before held-out scoring.','small'))
+          'Both models passed the pilot. An initial freeze preceded test scoring; a data-only stem-overlap '
+          'amendment preceded all held-out performance review. Calibration was refitted and frozen anew; '
+          'unchanged raw scores retain their original provenance. See PROTOCOL-AMENDMENT.md.','small'))
 
     new('2. Calibration transfer on the held-out test')
     add(figure(results/'figure-2-reliability.png'),
@@ -179,7 +181,10 @@ def build(results,provenance):
     add(table(['Subset','Calibration n','Mean refitted Brier','Range over subsets'],rows,[105,90,155,172]),
         Spacer(1,7),p('The subsets overlap and share one test set. They measure sensitivity to label selection; '
           'they are not ten independent replications. The 400-example fit is a reference, not a proven optimum. '
-          'A favorable small subset cannot establish a label-efficiency claim by itself.','small'))
+          'A favorable small subset cannot establish a label-efficiency claim by itself. '
+          f"{sum(x.get('at_boundary',False) for x in r['sample_size_curves'])} of {len(r['sample_size_curves'])} "
+          'sample-curve rows reach a temperature boundary (rows share fits and are not independent). '
+          'Boundary flags and exact temperatures are saved in sample-size.csv.','small'))
     rows=[]
     for role in roles:
         for d in ds:
@@ -190,7 +195,7 @@ def build(results,provenance):
     add(p('Secondary 400-example transfer differences','h2'),
         table(['Model','Subset','8-bit difference','4-bit difference'],rows,[135,115,136,136]),
         Spacer(1,7),p('Positive differences favor refitting. Only the prespecified primary comparison carries '
-          'the confirmatory bootstrap decision. These secondary comparisons are exploratory; no family of '
+          'the primary bootstrap decision. These secondary comparisons are exploratory; no family of '
           'significance claims is made. ARC-Easy and ARC-Challenge are related tasks, and the models share a family.','small'))
 
     new('4. Selective answering and deployment cost')

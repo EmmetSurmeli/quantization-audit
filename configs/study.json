@@ -1,6 +1,7 @@
 {
-  "schema_version": 1,
-  "name": "quantization-calibration-transfer-v1",
+  "schema_version": 2,
+  "name": "quantization-calibration-transfer-v2",
+  "deduplication": {"cross_split": "normalized_question_stem", "within_split": "normalized_question_and_unordered_choices", "priority": ["test", "validation", "train"]},
   "seed": 20261005,
   "dataset_repo": "allenai/ai2_arc",
   "datasets": ["ARC-Challenge", "ARC-Easy"],

@@ -1,5 +1,5 @@
 {
-  "config_hash": "d8e17e55cb66c0441b1db4846b161fc58584facef4438411eb9de1d4abfe4593",
+  "config_hash": "68bc4983944702d08eeab11d9e02cd0ea5b6c9baf64b05357f3c593da8f6d885",
   "counts": {
     "ARC-Challenge": {
       "calibration": 400,
@@ -18,8 +18,48 @@
   },
   "exclusions": [
     {
+      "key": "ARC-Challenge:MCAS_2000_8_10",
+      "reason": "cross_split_question_stem",
+      "split": "validation"
+    },
+    {
+      "key": "ARC-Challenge:Mercury_7175455",
+      "reason": "cross_split_question_stem",
+      "split": "validation"
+    },
+    {
+      "key": "ARC-Challenge:ACTAAP_2012_7_13",
+      "reason": "cross_split_question_stem",
+      "split": "train"
+    },
+    {
+      "key": "ARC-Challenge:CSZ20740",
+      "reason": "cross_split_question_stem",
+      "split": "train"
+    },
+    {
       "key": "ARC-Challenge:MEA_2012_5_8",
       "reason": "duplicate_content",
+      "split": "train"
+    },
+    {
+      "key": "ARC-Challenge:Mercury_7107380",
+      "reason": "cross_split_question_stem",
+      "split": "train"
+    },
+    {
+      "key": "ARC-Challenge:Mercury_7268223",
+      "reason": "cross_split_question_stem",
+      "split": "train"
+    },
+    {
+      "key": "ARC-Challenge:NYSEDREGENTS_2011_4_24",
+      "reason": "cross_split_question_stem",
+      "split": "train"
+    },
+    {
+      "key": "ARC-Challenge:TIMSS_1995_8_O11",
+      "reason": "cross_split_question_stem",
       "split": "train"
     },
     {
@@ -33,15 +73,54 @@
       "split": "train"
     },
     {
+      "key": "ARC-Easy:Mercury_402613",
+      "reason": "cross_split_question_stem",
+      "split": "train"
+    },
+    {
+      "key": "ARC-Easy:Mercury_409875",
+      "reason": "cross_split_question_stem",
+      "split": "train"
+    },
+    {
+      "key": "ARC-Easy:Mercury_7068793",
+      "reason": "cross_split_question_stem",
+      "split": "train"
+    },
+    {
+      "key": "ARC-Easy:NYSEDREGENTS_2004_4_6",
+      "reason": "cross_split_question_stem",
+      "split": "train"
+    },
+    {
+      "key": "ARC-Easy:NYSEDREGENTS_2006_4_9",
+      "reason": "cross_split_question_stem",
+      "split": "train"
+    },
+    {
       "key": "ARC-Easy:NYSEDREGENTS_2009_4_25",
       "reason": "duplicate_content",
+      "split": "train"
+    },
+    {
+      "key": "ARC-Easy:NYSEDREGENTS_2009_8_9",
+      "reason": "cross_split_question_stem",
+      "split": "train"
+    },
+    {
+      "key": "ARC-Easy:NYSEDREGENTS_2016_4_12",
+      "reason": "cross_split_question_stem",
+      "split": "train"
+    },
+    {
+      "key": "ARC-Easy:TIMSS_2003_8_pg17",
+      "reason": "cross_split_question_stem",
       "split": "train"
     }
   ],
   "ids": {
     "ARC-Challenge": {
       "calibration": [
-        "ARC-Challenge:MEA_2010_8_7-v1",
         "ARC-Challenge:MSA_2013_5_36",
         "ARC-Challenge:Mercury_7213850",
         "ARC-Challenge:Mercury_404993",
@@ -62,7 +141,6 @@
         "ARC-Challenge:Mercury_7228025",
         "ARC-Challenge:Mercury_SC_415723",
         "ARC-Challenge:Mercury_7200848",
-        "ARC-Challenge:Mercury_7107380",
         "ARC-Challenge:Mercury_SC_409675",
         "ARC-Challenge:TIMSS_1995_8_N3",
         "ARC-Challenge:Mercury_SC_LBS10030",
@@ -99,7 +177,6 @@
         "ARC-Challenge:LEAP__5_10318",
         "ARC-Challenge:Mercury_7056613",
         "ARC-Challenge:Mercury_7166600",
-        "ARC-Challenge:TIMSS_1995_8_O11",
         "ARC-Challenge:NYSEDREGENTS_2007_4_17",
         "ARC-Challenge:Mercury_7213395",
         "ARC-Challenge:Mercury_7228043",
@@ -249,7 +326,6 @@
         "ARC-Challenge:Mercury_SC_416654",
         "ARC-Challenge:Mercury_SC_415697",
         "ARC-Challenge:Mercury_7068530",
-        "ARC-Challenge:NYSEDREGENTS_2011_4_24",
         "ARC-Challenge:Mercury_7142713",
         "ARC-Challenge:Mercury_7185395",
         "ARC-Challenge:NYSEDREGENTS_2005_4_20",
@@ -440,7 +516,11 @@
         "ARC-Challenge:Mercury_7283588",
         "ARC-Challenge:ACTAAP_2010_5_14",
         "ARC-Challenge:Mercury_7171920",
-        "ARC-Challenge:Mercury_SC_LBS10951"
+        "ARC-Challenge:Mercury_SC_LBS10951",
+        "ARC-Challenge:Mercury_7071943",
+        "ARC-Challenge:CSZ_2004_5_CSZ20414",
+        "ARC-Challenge:Mercury_7094693",
+        "ARC-Challenge:Mercury_SC_416424"
       ],
       "pilot": [
         "ARC-Challenge:MDSA_2011_8_25",
@@ -490,7 +570,6 @@
         "ARC-Challenge:Mercury_SC_400169",
         "ARC-Challenge:Mercury_7188878",
         "ARC-Challenge:MCAS_1999_4_2",
-        "ARC-Challenge:CSZ20740",
         "ARC-Challenge:Mercury_SC_414081",
         "ARC-Challenge:MCAS_2009_8_1",
         "ARC-Challenge:MCAS_2005_5_15",
@@ -542,7 +621,8 @@
         "ARC-Challenge:Mercury_SC_401336",
         "ARC-Challenge:Mercury_7187005",
         "ARC-Challenge:Mercury_SC_LBS10389",
-        "ARC-Challenge:Mercury_SC_LBS10039"
+        "ARC-Challenge:Mercury_SC_LBS10039",
+        "ARC-Challenge:MEA_2010_8_7-v1"
       ],
       "robustness": [
         "ARC-Challenge:Mercury_SC_400386",
@@ -2372,7 +2452,6 @@
         "ARC-Easy:Mercury_SC_409886",
         "ARC-Easy:NYSEDREGENTS_2005_8_36",
         "ARC-Easy:Mercury_7274330",
-        "ARC-Easy:Mercury_409875",
         "ARC-Easy:Mercury_SC_401174",
         "ARC-Easy:NCEOGA_2013_8_58",
         "ARC-Easy:Mercury_SC_LBS10908",
@@ -2424,7 +2503,8 @@
         "ARC-Easy:CSZ20146",
         "ARC-Easy:MCAS_2003_8_30",
         "ARC-Easy:Mercury_7128678",
-        "ARC-Easy:MCAS_1999_8_8"
+        "ARC-Easy:MCAS_1999_8_8",
+        "ARC-Easy:VASoL_2011_5_26"
       ],
       "pilot": [
         "ARC-Easy:Mercury_SC_400116",
@@ -5213,5 +5293,5 @@
     }
   },
   "pins_hash": "86ea5938bd2fa35b1dd49e8d7aeb6d6b87bf7dd936784839206b3016095ce7f9",
-  "splits_hash": "50796901816346367c42ff82d978f1865ce428dec339289e2d76a8fb6f82eab1"
+  "splits_hash": "491451a8307592f022e72aa1350733a306ec512013bff36e401f792629736e45"
 }

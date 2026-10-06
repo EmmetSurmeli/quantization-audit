@@ -32,18 +32,26 @@ def build_splits(raw, cfg):
     Answer order is ignored for detecting duplicate content. Dataset-qualified
     IDs are used because source IDs may recur across ARC configurations.
     """
-    seen_ids, seen_content, exclusions = set(), set(), []
+    seen_ids, seen_content, seen_stems, exclusions = set(), set(), set(), []
     cleaned = {d: {s: [] for s in ("train", "validation", "test")} for d in cfg["datasets"]}
     for split in ("test", "validation", "train"):
+        # A repeated stem in an earlier (higher-priority) split is excluded even
+        # when its distractors differ. Within a split, retain distinct questions
+        # with different choices; a generic stem alone is not a full duplicate.
+        blocked_stems=set(seen_stems)
         for dataset in cfg["datasets"]:
             for row in sorted(raw[dataset][split], key=lambda x: str(x["id"])):
                 r = canonical_row(row, dataset)
-                reason = "duplicate_id" if r["key"] in seen_ids else "duplicate_content" if r["content_hash"] in seen_content else None
+                stem=normalize(r["question"])
+                reason = ("duplicate_id" if r["key"] in seen_ids else
+                          "duplicate_content" if r["content_hash"] in seen_content else
+                          "cross_split_question_stem" if stem in blocked_stems else None)
                 if reason:
                     exclusions.append({"key": r["key"], "split": split, "reason": reason})
                     continue
                 seen_ids.add(r["key"])
                 seen_content.add(r["content_hash"])
+                seen_stems.add(stem)
                 cleaned[dataset][split].append(r)
     result = {}
     counts = cfg["counts"]

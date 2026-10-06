@@ -8,6 +8,7 @@ from .analysis import load_cell,assert_paired
 from .common import config_at,digest,read_json,write_json
 from .stats import probabilities
 from .store import ScoreStore,cell_name
+from .data import normalize
 
 
 def audit(workspace,out):
@@ -17,6 +18,10 @@ def audit(workspace,out):
     def check(name,passed):
         checks.append({'check':name,'passed':bool(passed)})
     seen_keys=set();seen_content=set()
+    stems={stage:{normalize(r['question']) for d in splits.values() for r in d[stage]}
+           for stage in ('pilot','calibration','validation','test')}
+    for a,b in (('pilot','test'),('calibration','test'),('validation','test'),('calibration','validation')):
+        check(f'No normalized question-stem overlap: {a}/{b}',not(stems[a]&stems[b]))
     for d,stages in splits.items():
         for stage in ('pilot','calibration','validation','test'):
             rows=stages[stage]

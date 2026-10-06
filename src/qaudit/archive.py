@@ -21,6 +21,7 @@ def export_archive(workspace,out):
         names += [f"pilot-{role}.json",f"calibration-{role}.json"]
         names += [f"models/{role}/{b}/artifact.json" for b in (16,8,4)]
     names += [n for n in ("hardware.json","execution.json") if (ws/n).exists()]
+    names += [p.name for p in sorted(ws.glob('amendment-*-migration.json'))]
     for name in names:
         dest=out/name;dest.parent.mkdir(parents=True,exist_ok=True)
         shutil.copyfile(ws/name,dest)

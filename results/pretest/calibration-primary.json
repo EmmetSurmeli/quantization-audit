@@ -1,29 +1,28 @@
 {
-  "config_hash": "d8e17e55cb66c0441b1db4846b161fc58584facef4438411eb9de1d4abfe4593",
+  "config_hash": "68bc4983944702d08eeab11d9e02cd0ea5b6c9baf64b05357f3c593da8f6d885",
   "datasets": {
     "ARC-Challenge": {
       "fits": {
         "16": {
           "at_boundary": false,
-          "fit_nll": 0.3177326075234334,
+          "fit_nll": 0.32947913721457395,
           "n": 400,
-          "temperature": 6.610506604219579
+          "temperature": 6.697072543459434
         },
         "4": {
           "at_boundary": false,
-          "fit_nll": 0.38701940188074674,
+          "fit_nll": 0.39782195132245635,
           "n": 400,
-          "temperature": 5.194196522490394
+          "temperature": 5.260071819848886
         },
         "8": {
           "at_boundary": false,
-          "fit_nll": 0.32036543038442256,
+          "fit_nll": 0.3323614215806073,
           "n": 400,
-          "temperature": 6.670600547047916
+          "temperature": 6.759586857731153
         }
       },
       "ids": [
-        "ARC-Challenge:MEA_2010_8_7-v1",
         "ARC-Challenge:MSA_2013_5_36",
         "ARC-Challenge:Mercury_7213850",
         "ARC-Challenge:Mercury_404993",
@@ -44,7 +43,6 @@
         "ARC-Challenge:Mercury_7228025",
         "ARC-Challenge:Mercury_SC_415723",
         "ARC-Challenge:Mercury_7200848",
-        "ARC-Challenge:Mercury_7107380",
         "ARC-Challenge:Mercury_SC_409675",
         "ARC-Challenge:TIMSS_1995_8_N3",
         "ARC-Challenge:Mercury_SC_LBS10030",
@@ -81,7 +79,6 @@
         "ARC-Challenge:LEAP__5_10318",
         "ARC-Challenge:Mercury_7056613",
         "ARC-Challenge:Mercury_7166600",
-        "ARC-Challenge:TIMSS_1995_8_O11",
         "ARC-Challenge:NYSEDREGENTS_2007_4_17",
         "ARC-Challenge:Mercury_7213395",
         "ARC-Challenge:Mercury_7228043",
@@ -231,7 +228,6 @@
         "ARC-Challenge:Mercury_SC_416654",
         "ARC-Challenge:Mercury_SC_415697",
         "ARC-Challenge:Mercury_7068530",
-        "ARC-Challenge:NYSEDREGENTS_2011_4_24",
         "ARC-Challenge:Mercury_7142713",
         "ARC-Challenge:Mercury_7185395",
         "ARC-Challenge:NYSEDREGENTS_2005_4_20",
@@ -422,33 +418,37 @@
         "ARC-Challenge:Mercury_7283588",
         "ARC-Challenge:ACTAAP_2010_5_14",
         "ARC-Challenge:Mercury_7171920",
-        "ARC-Challenge:Mercury_SC_LBS10951"
+        "ARC-Challenge:Mercury_SC_LBS10951",
+        "ARC-Challenge:Mercury_7071943",
+        "ARC-Challenge:CSZ_2004_5_CSZ20414",
+        "ARC-Challenge:Mercury_7094693",
+        "ARC-Challenge:Mercury_SC_416424"
       ],
       "score_hashes": {
-        "16": "1c09d16c5bee1d57fcae0df0d896d01b2acb4b99a9abcf167f2123202e1c1905",
-        "4": "0cc457eb69e940f219bd5e86fe650a8f07f1d2d6145f5f3b5f81797bd39fe824",
-        "8": "c9596efe63841ae5ac602d6c40ffc92062dd855cddc3335c9980311d2b670a58"
+        "16": "534fe8560f28e2f892b5a8eba966d54c2ba060adc2e7d48525d26b6f90e2c6ae",
+        "4": "a4dbc8836006348ac931030efdf6a9d23a2cec945d3c883e6b8c0f63971cc2f1",
+        "8": "d78b672b3fdd71b163dc36868d9469f9717f75baf54328276b9d016ac3488601"
       }
     },
     "ARC-Easy": {
       "fits": {
         "16": {
           "at_boundary": false,
-          "fit_nll": 0.1274221319571167,
+          "fit_nll": 0.12736519949834585,
           "n": 400,
-          "temperature": 4.994903004788333
+          "temperature": 4.9982146273927315
         },
         "4": {
           "at_boundary": false,
-          "fit_nll": 0.13981750095075038,
+          "fit_nll": 0.13976733260781096,
           "n": 400,
-          "temperature": 3.8988794060911163
+          "temperature": 3.9015732010747683
         },
         "8": {
           "at_boundary": false,
-          "fit_nll": 0.12084760742627931,
+          "fit_nll": 0.12079797571765852,
           "n": 400,
-          "temperature": 4.920497844047868
+          "temperature": 4.923575353140895
         }
       },
       "ids": [
@@ -799,7 +799,6 @@
         "ARC-Easy:Mercury_SC_409886",
         "ARC-Easy:NYSEDREGENTS_2005_8_36",
         "ARC-Easy:Mercury_7274330",
-        "ARC-Easy:Mercury_409875",
         "ARC-Easy:Mercury_SC_401174",
         "ARC-Easy:NCEOGA_2013_8_58",
         "ARC-Easy:Mercury_SC_LBS10908",
@@ -851,12 +850,13 @@
         "ARC-Easy:CSZ20146",
         "ARC-Easy:MCAS_2003_8_30",
         "ARC-Easy:Mercury_7128678",
-        "ARC-Easy:MCAS_1999_8_8"
+        "ARC-Easy:MCAS_1999_8_8",
+        "ARC-Easy:VASoL_2011_5_26"
       ],
       "score_hashes": {
-        "16": "b54d3c4b283e03ef331e244f5284b2a591598705b1760dac0f40fbadcac027b8",
-        "4": "8875137daabbfc967acd16094fcde5247a311e54ef6bbbb0b271d0975bea5b56",
-        "8": "63ef7231fb783471e7eb96a077471e2526d4ed803770853708455ae6ee4aaa8a"
+        "16": "be865f0ccd03c2291ac4e9feb4d7511e8b59efec4a66c1e77f2b0c1eb7731411",
+        "4": "59d1cde4ac6680c33efde7f91497e542e21901600101f0a892d438be786d080f",
+        "8": "c60046d8300f646175e3bc02a8b88f08a6979d42b3f6cab294b9f616d0b50759"
       }
     }
   },

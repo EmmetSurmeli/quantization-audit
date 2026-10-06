@@ -3,8 +3,8 @@
     {
       "accuracy": 0.91,
       "dataset": "ARC-Challenge",
-      "mean_input_tokens": 90.49,
-      "mean_seconds": 0.10878301913617179,
+      "mean_input_tokens": 90.5,
+      "mean_seconds": 0.10871250122552738,
       "n": 100,
       "p95_seconds": 0.1473417459288612,
       "peak_memory_gb": 8.195292208,
@@ -14,7 +14,7 @@
       "accuracy": 0.95,
       "dataset": "ARC-Easy",
       "mean_input_tokens": 84.01,
-      "mean_seconds": 0.10444198167650029,
+      "mean_seconds": 0.10435010790126398,
       "n": 100,
       "p95_seconds": 0.11112209786660969,
       "peak_memory_gb": 8.17813816,
@@ -23,8 +23,8 @@
     {
       "accuracy": 0.92,
       "dataset": "ARC-Challenge",
-      "mean_input_tokens": 90.49,
-      "mean_seconds": 0.1452577241952531,
+      "mean_input_tokens": 90.5,
+      "mean_seconds": 0.14515220751753077,
       "n": 100,
       "p95_seconds": 0.16848412954714148,
       "peak_memory_gb": 4.522572912,
@@ -34,7 +34,7 @@
       "accuracy": 0.95,
       "dataset": "ARC-Easy",
       "mean_input_tokens": 84.01,
-      "mean_seconds": 0.14749871072359383,
+      "mean_seconds": 0.14746215530438347,
       "n": 100,
       "p95_seconds": 0.17597658310551195,
       "peak_memory_gb": 4.50663128,
@@ -43,10 +43,10 @@
     {
       "accuracy": 0.91,
       "dataset": "ARC-Challenge",
-      "mean_input_tokens": 90.49,
-      "mean_seconds": 0.14567859915085138,
+      "mean_input_tokens": 90.5,
+      "mean_seconds": 0.1452916299854405,
       "n": 100,
-      "p95_seconds": 0.17469448962947354,
+      "p95_seconds": 0.17403176394291223,
       "peak_memory_gb": 2.608708776,
       "precision": 4
     },
@@ -54,16 +54,16 @@
       "accuracy": 0.92,
       "dataset": "ARC-Easy",
       "mean_input_tokens": 84.01,
-      "mean_seconds": 0.13942107919137925,
+      "mean_seconds": 0.13922187459422275,
       "n": 100,
       "p95_seconds": 0.16320105663035064,
       "peak_memory_gb": 2.591227048,
       "precision": 4
     }
   ],
-  "conservative_two_model_hours": 1.410563562464978,
+  "conservative_two_model_hours": 1.4090699455729077,
   "identity": {
-    "config": "d8e17e55cb66c0441b1db4846b161fc58584facef4438411eb9de1d4abfe4593",
+    "config": "68bc4983944702d08eeab11d9e02cd0ea5b6c9baf64b05357f3c593da8f6d885",
     "environment": {
       "machine": "arm64",
       "packages": {
@@ -81,11 +81,11 @@
       "python": "3.13.5"
     },
     "pins": "86ea5938bd2fa35b1dd49e8d7aeb6d6b87bf7dd936784839206b3016095ce7f9",
-    "scoring_source": "65150019f51cda2c755b97000f1e0dc47bedb04da4873f736ad6eebc9895501b",
-    "splits": "50796901816346367c42ff82d978f1865ce428dec339289e2d76a8fb6f82eab1"
+    "scoring_source": "5dd64fe9747cb2627c9a2c9c3fd128ebe8a94571665913a987c0cdb98dea387d",
+    "splits": "491451a8307592f022e72aa1350733a306ec512013bff36e401f792629736e45"
   },
   "passed": true,
-  "projected_primary_hours": 0.705281781232489,
+  "projected_primary_hours": 0.7045349727864538,
   "reasons": [],
   "role": "primary"
 }

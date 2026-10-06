@@ -12,7 +12,7 @@ The sum-of-squares multiclass Brier definition is used, without dividing by the 
 
 ## Data boundary
 
-Deduplicate normalized question and unordered choice content globally across both ARC subsets, with test taking precedence over validation and training. Also check dataset-qualified source IDs. Record exclusions. Deterministically choose 100 training questions for the pilot, a disjoint 400-question training calibration pool, and 100 validation questions. Preserve complete test splits unless exact duplicate removal requires an exclusion.
+Deduplicate normalized question and unordered choice content globally across both ARC subsets, with test taking precedence over validation and training. Also exclude repeated normalized question stems across these official splits even when choices differ, and check dataset-qualified source IDs. Record exclusions. Within the same official split, distinct choice sets may share a generic stem. Deterministically choose 100 training questions for the pilot, a disjoint 400-question training calibration pool, and 100 validation questions. Preserve complete test splits unless exact duplicate removal requires an exclusion. The stem rule was added by the documented [protocol amendment](PROTOCOL-AMENDMENT.md), before any held-out performance summary was inspected.
 
 Tokenize the fixed prompt with the pinned official chat template and `enable_thinking=False`. Verify each option letter is exactly one token, save the full prompt-token hash, score the next-token logits once, and normalize over valid letters. Record probability mass outside the choice set. Do not generate reasoning traces, truncate questions silently, or use labels in scoring.
 

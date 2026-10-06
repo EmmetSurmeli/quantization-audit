@@ -6,4 +6,5 @@ __pycache__/
 workspaces/
 *.safetensors
 *.sqlite*
+!results/reproducibility/scores.sqlite.gz
 .DS_Store

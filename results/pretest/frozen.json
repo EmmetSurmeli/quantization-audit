@@ -1,10 +1,10 @@
 {
   "calibration_hashes": {
-    "primary": "c8a249f19aeda327d66e4519a272357d55f86bba14094dd49172bf70d61cf936",
-    "replication": "0672bd3cefd096ef61073d6090641b109c1cc08cdf3ff93f89fa8947fd52ff47"
+    "primary": "d5707937cd4505cfb31fe94d54ee5d44dec5f6b04603daf7a1070ed8ab1b4db8",
+    "replication": "137f20a7c5c2ff78772fdd41cdce195138f33d92e57af99ee9f6d2b6f927abf7"
   },
   "identity": {
-    "config": "d8e17e55cb66c0441b1db4846b161fc58584facef4438411eb9de1d4abfe4593",
+    "config": "68bc4983944702d08eeab11d9e02cd0ea5b6c9baf64b05357f3c593da8f6d885",
     "environment": {
       "machine": "arm64",
       "packages": {
@@ -22,10 +22,10 @@
       "python": "3.13.5"
     },
     "pins": "86ea5938bd2fa35b1dd49e8d7aeb6d6b87bf7dd936784839206b3016095ce7f9",
-    "scoring_source": "65150019f51cda2c755b97000f1e0dc47bedb04da4873f736ad6eebc9895501b",
-    "splits": "50796901816346367c42ff82d978f1865ce428dec339289e2d76a8fb6f82eab1"
+    "scoring_source": "5dd64fe9747cb2627c9a2c9c3fd128ebe8a94571665913a987c0cdb98dea387d",
+    "splits": "491451a8307592f022e72aa1350733a306ec512013bff36e401f792629736e45"
   },
-  "pilot_gate_hash": "3cc8744958d5f9ecd518bfd6ca3f6b640660bdc0e681cb6ece9add739988b644",
+  "pilot_gate_hash": "f3546b773ea2b137b24985a776eb88b893268b2e8540bcc7e858b19493bde6ae",
   "roles": [
     "primary",
     "replication"

@@ -3,10 +3,10 @@
     {
       "accuracy": 0.74,
       "dataset": "ARC-Challenge",
-      "mean_input_tokens": 90.49,
-      "mean_seconds": 0.043222292521968485,
+      "mean_input_tokens": 90.5,
+      "mean_seconds": 0.04339336835313588,
       "n": 100,
-      "p95_seconds": 0.04647049778141081,
+      "p95_seconds": 0.04763363144593313,
       "peak_memory_gb": 3.603007576,
       "precision": 16
     },
@@ -14,17 +14,17 @@
       "accuracy": 0.82,
       "dataset": "ARC-Easy",
       "mean_input_tokens": 84.01,
-      "mean_seconds": 0.04231469419784844,
+      "mean_seconds": 0.04247172961011529,
       "n": 100,
-      "p95_seconds": 0.04614261215319857,
+      "p95_seconds": 0.046205614705104384,
       "peak_memory_gb": 3.583019096,
       "precision": 16
     },
     {
-      "accuracy": 0.72,
+      "accuracy": 0.73,
       "dataset": "ARC-Challenge",
-      "mean_input_tokens": 90.49,
-      "mean_seconds": 0.07453915542457253,
+      "mean_input_tokens": 90.5,
+      "mean_seconds": 0.07458804043475538,
       "n": 100,
       "p95_seconds": 0.08711584383854643,
       "peak_memory_gb": 2.145568944,
@@ -34,17 +34,17 @@
       "accuracy": 0.82,
       "dataset": "ARC-Easy",
       "mean_input_tokens": 84.01,
-      "mean_seconds": 0.07123223710339516,
+      "mean_seconds": 0.07124171210452915,
       "n": 100,
       "p95_seconds": 0.08688734399620443,
       "peak_memory_gb": 2.148403376,
       "precision": 8
     },
     {
-      "accuracy": 0.64,
+      "accuracy": 0.63,
       "dataset": "ARC-Challenge",
-      "mean_input_tokens": 90.49,
-      "mean_seconds": 0.07397112459642813,
+      "mean_input_tokens": 90.5,
+      "mean_seconds": 0.0739517366560176,
       "n": 100,
       "p95_seconds": 0.08657455601496622,
       "peak_memory_gb": 1.285343408,
@@ -54,16 +54,16 @@
       "accuracy": 0.83,
       "dataset": "ARC-Easy",
       "mean_input_tokens": 84.01,
-      "mean_seconds": 0.07089100372279063,
+      "mean_seconds": 0.07086792955407872,
       "n": 100,
       "p95_seconds": 0.08702106074197218,
       "peak_memory_gb": 1.288161456,
       "precision": 4
     }
   ],
-  "conservative_two_model_hours": 0.6693552185354636,
+  "conservative_two_model_hours": 0.6699462485867036,
   "identity": {
-    "config": "d8e17e55cb66c0441b1db4846b161fc58584facef4438411eb9de1d4abfe4593",
+    "config": "68bc4983944702d08eeab11d9e02cd0ea5b6c9baf64b05357f3c593da8f6d885",
     "environment": {
       "machine": "arm64",
       "packages": {
@@ -81,11 +81,11 @@
       "python": "3.13.5"
     },
     "pins": "86ea5938bd2fa35b1dd49e8d7aeb6d6b87bf7dd936784839206b3016095ce7f9",
-    "scoring_source": "65150019f51cda2c755b97000f1e0dc47bedb04da4873f736ad6eebc9895501b",
-    "splits": "50796901816346367c42ff82d978f1865ce428dec339289e2d76a8fb6f82eab1"
+    "scoring_source": "5dd64fe9747cb2627c9a2c9c3fd128ebe8a94571665913a987c0cdb98dea387d",
+    "splits": "491451a8307592f022e72aa1350733a306ec512013bff36e401f792629736e45"
   },
   "passed": true,
-  "projected_primary_hours": 0.3346776092677318,
+  "projected_primary_hours": 0.3349731242933518,
   "reasons": [],
   "role": "replication"
 }
