@@ -84,12 +84,15 @@ To move the score archive to another machine without weights:
 qaudit export --out results/reproducibility
 qaudit --workspace workspaces/reanalysis restore --archive results/reproducibility
 qaudit --workspace workspaces/reanalysis analyze --out results/reanalysis
+qaudit --workspace workspaces/reanalysis audit --out results/reanalysis/acceptance-checks.json
 ```
 
 The archive verifies file checksums before restoration. Reanalysis verifies frozen data and calibration, and records its own software environment; it does not require the original Mac or MLX installation. Resume scoring still requires an exact match to the frozen scoring environment.
+
+The final six-page PDF is built from measured outputs with `python scripts/build_report.py --results results/measured --provenance results/pretest` (requires `reportlab` and `pypdf`). Its page count is checked automatically; rendered pages are also reviewed before delivery. The report builder refuses non-measured input.
 
 `analyze` produces machine-readable results, CSV tables, four PNG figures, stratified error cases, and a Markdown report. Bootstrap confidence intervals incorporate calibration-fit uncertainty. Ten calibration subsets are sensitivity checks, not independent test sets. At 400 examples they coincide and are evaluated once.
 
 The code contains no synthetic production/demo backend. Artificial data appears only in tests and is never a research result. Report both null and positive findings. Claims of accuracy improvement from scalar temperature scaling are invalid.
 
-The data remains subject to the ARC dataset's license and model weights to the Qwen model license. Retain source attribution when distributing study artifacts.
+The data remains subject to the ARC dataset's license and model weights to the Qwen model license. Retain source attribution when distributing study artifacts; [third-party attribution](THIRD_PARTY.md) identifies the CC BY-SA material in the archive.

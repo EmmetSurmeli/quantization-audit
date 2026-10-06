@@ -34,6 +34,8 @@ def parser():
     s.add_argument("--out",type=Path,required=True)
     s=sub.add_parser("restore",help="Restore a portable archive into an empty workspace")
     s.add_argument("--archive",type=Path,required=True)
+    s=sub.add_parser("audit",help="Validate all completed score records without model inference")
+    s.add_argument("--out",type=Path,required=True)
     sub.add_parser("status",help="Show progress without loading a model")
     return p
 
@@ -74,6 +76,9 @@ def main(argv=None):
             elif args.command=="restore":
                 from .archive import restore_archive
                 result=restore_archive(args.archive,ws)
+            elif args.command=="audit":
+                from .audit import audit
+                result=audit(ws,args.out)
             else:
                 from .store import ScoreStore
                 with ScoreStore(ws/"scores.sqlite") as store:

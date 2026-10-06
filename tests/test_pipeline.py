@@ -6,6 +6,7 @@ import pytest
 
 from qaudit.analysis import analyze,calibrate
 from qaudit.archive import export_archive,restore_archive
+from qaudit.audit import audit
 from qaudit.common import digest,read_json,write_json
 from qaudit.data import canonical_row,permute
 from qaudit.scoring import freeze,check_frozen,protocol_identity
@@ -18,7 +19,8 @@ def test_complete_cached_pipeline_without_gpu(tmp_path,monkeypatch):
     cfg.update(calibration_sizes=[2,4],calibration_seeds=2,bootstrap_replicates=12)
     cfg["counts"]={"pilot":8,"calibration":4,"validation":4,"robustness":4}
     write_json(tmp_path/"study.json",cfg)
-    write_json(tmp_path/"pins.json",{"fixture_only":True})
+    pin={"repo":"test-fixture/never-download","revision":"fixture-only"}
+    write_json(tmp_path/"pins.json",{"fixture_only":True,"models":{"primary":pin}})
     splits={}
     for d in cfg["datasets"]:
         splits[d]={}
@@ -33,11 +35,15 @@ def test_complete_cached_pipeline_without_gpu(tmp_path,monkeypatch):
     write_json(tmp_path/"split-manifest.json",{"fixture_only":True})
     with ScoreStore(tmp_path/"scores.sqlite") as store:
         for bits in cfg["precisions"]:
-            write_json(tmp_path/"models"/"primary"/str(bits)/"artifact.json",{"serialized_bytes":1000,"fixture_only":True})
+            files={"fixture":{"sha256":digest("fixture"),"bytes":1000}}
+            write_json(tmp_path/"models"/"primary"/str(bits)/"artifact.json",{
+                "serialized_bytes":1000,"fixture_only":True,"files":files,"artifact_hash":digest(files),"spec":{"pin":pin},
+                "quantized_modules":[] if bits==16 else [{"name":"fixture","bits":bits,"group_size":64}]})
             for d in cfg["datasets"]:
                 for stage,rows in splits[d].items():
                     cell=cell_name("primary",bits,d,stage)
-                    store.register(cell,{"fixture_only":True,"protocol":protocol_identity(tmp_path)})
+                    store.register(cell,{"fixture_only":True,"protocol":protocol_identity(tmp_path),"artifact_hash":digest(files),
+                                         "role":"primary","bits":bits,"dataset":d,"stage":stage})
                     for i,row in enumerate(rows):
                         r=permute(row,cfg["seed"]) if stage=="robustness" else row
                         original_scores=np.array([3.,1.,0.]) if i%4 else np.array([1.,3.,0.])
@@ -63,6 +69,14 @@ def test_complete_cached_pipeline_without_gpu(tmp_path,monkeypatch):
     restore_archive(archive,restored)
     # The archive round trip retains question identities and complete statistics.
     assert analyze(restored,tmp_path/"reanalysis")["primary"]==result["primary"]
+    checked=audit(restored,tmp_path/"acceptance.json")
+    assert checked["passed"] and checked["scoring_records"]==168
+    # Corrupt a restored model manifest: the score-to-artifact link must fail.
+    artifact_path=restored/"models/primary/4/artifact.json"
+    artifact=read_json(artifact_path);artifact["artifact_hash"]="tampered"
+    write_json(artifact_path,artifact)
+    with pytest.raises(ValueError,match="failed acceptance"):
+        audit(restored,tmp_path/"corrupt-acceptance.json")
     with pytest.raises(ValueError,match="empty"):
         restore_archive(archive,restored)
     modified=read_json(tmp_path/"calibration-primary.json")
