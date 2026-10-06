@@ -1,0 +1,162 @@
+{
+  "ARC-Challenge:MCAS_1999_4_27": {
+    "category": "unchanged_correct",
+    "content_hash": "f137111c76bdab9e607a3894a0aeaef6ce9e363675a256c1d4f6d21a7c06cdd1",
+    "gold": 0,
+    "note": "Both select the benchmark's Mars-landing answer. The word \"current\" is time dependent in this 1999 item; this audit evaluates the fixed dataset key, not a timeless technology claim.",
+    "quantized_prediction": 0,
+    "reference_prediction": 0
+  },
+  "ARC-Challenge:MCAS_2004_8_23": {
+    "category": "beneficial_flip",
+    "content_hash": "194968010f853dca6453b11f342b4f0de94bcc009f21d6c5a92500ffdcdd6ed4",
+    "gold": 1,
+    "note": "The answer changes from 325 to 490 km/h, matching 980 km divided by 2 hours. Both options have the same westward direction, so the decisive content difference is arithmetic.",
+    "quantized_prediction": 1,
+    "reference_prediction": 0
+  },
+  "ARC-Challenge:MCAS_2010_8_12016": {
+    "category": "unchanged_wrong",
+    "content_hash": "b0b1ffa5a09aa7ad14037513325405437477f2feab57ecf39889e7d8c31ab411",
+    "gold": 2,
+    "note": "Both choose ease of replacement, missing the keyed ability to customize the bus. The same text and letter mapping are used in both conditions.",
+    "quantized_prediction": 1,
+    "reference_prediction": 1
+  },
+  "ARC-Challenge:MEA_2016_8_12": {
+    "category": "beneficial_flip",
+    "content_hash": "e364ec0cc7fd85d411f9a3e53b0c48b1e6ad7e6e2a90f9ae63082cdd222fadcb",
+    "gold": 1,
+    "note": "The answer changes from forest fire to burning coal, matching the key's intended contrast between abrupt events and cumulative environmental change. This does not establish a general reasoning improvement.",
+    "quantized_prediction": 1,
+    "reference_prediction": 2
+  },
+  "ARC-Challenge:Mercury_400880": {
+    "category": "harmful_flip",
+    "content_hash": "1d9c8c938da2c9deb2d32f091c6b6b2cc39fcd7d2f748fe4b1470b4aa9731d15",
+    "gold": 2,
+    "note": "The answer changes from loss of an electron to loss of a proton. Losing an electron yields the positive ion shown; the caret notation and prompt tokens are identical across precisions, so this is not a changed-format artifact.",
+    "quantized_prediction": 0,
+    "reference_prediction": 2
+  },
+  "ARC-Challenge:Mercury_7024395": {
+    "category": "unchanged_wrong",
+    "content_hash": "fb0d8523c94df20db8811e10e3ec954280d4d1598444b54bcaa914da01e7d044",
+    "gold": 0,
+    "note": "Both choose disk diameter, while the key excludes bubble counting. The experimental measurement protocol is not fully specified in the text. Retain the original key and flag possible ambiguity.",
+    "quantized_prediction": 2,
+    "reference_prediction": 2
+  },
+  "ARC-Challenge:Mercury_7034843": {
+    "category": "unchanged_wrong",
+    "content_hash": "cdac2afb203d45252f5f624d7fbb41bc17ef09843c882a40bbdb66e648bb850a",
+    "gold": 1,
+    "note": "Both choose proton count, while the key favors state of matter. The wording is broad and admits exceptions; this is a potential item-interpretation issue, not evidence of a scoring bug.",
+    "quantized_prediction": 0,
+    "reference_prediction": 0
+  },
+  "ARC-Challenge:Mercury_7056298": {
+    "category": "unchanged_correct",
+    "content_hash": "0e01898dabe6adffa4b7350ccb774429c18ebd1eb20147511ba910b44264bd48",
+    "gold": 0,
+    "note": "Both conditions select decreased cellular energy. The choices and gold index agree across precisions; this is a stable benchmark-correct answer.",
+    "quantized_prediction": 0,
+    "reference_prediction": 0
+  },
+  "ARC-Challenge:Mercury_7057488": {
+    "category": "harmful_flip",
+    "content_hash": "970236b6484e8d9d7aad43d69118435b65614dc4ee547241a3000905496877ad",
+    "gold": 3,
+    "note": "The answer changes from the keyed natural three-state property to ordinary liquid-solid change. The \"unique\" wording is simplified curricular language; the observed ranking change remains against a fixed key.",
+    "quantized_prediction": 1,
+    "reference_prediction": 3
+  },
+  "ARC-Challenge:Mercury_7058135": {
+    "category": "unchanged_correct",
+    "content_hash": "e0428e69acde510965ffc9dad3893ece1f9749ceea38df36501e541ef99c7431",
+    "gold": 1,
+    "note": "Both select the benchmark's genus-level answer. The listed traits alone do not establish a taxonomic relationship; interpret correctness against the supplied educational key.",
+    "quantized_prediction": 1,
+    "reference_prediction": 1
+  },
+  "ARC-Challenge:Mercury_7086660": {
+    "category": "harmful_flip",
+    "content_hash": "1f4a82bf4a42d79f0ea27280c0463169f06015d447767c2ecada400a41cd0234",
+    "gold": 2,
+    "note": "The answer changes from past tropical climate to greater past water availability. The former matches the key's interpretation of palm fossils. The model's causal explanation for the change is unobserved.",
+    "quantized_prediction": 0,
+    "reference_prediction": 2
+  },
+  "ARC-Challenge:Mercury_7159215": {
+    "category": "harmful_flip",
+    "content_hash": "156f19945680e29ecf5b940e95094f3ee1ff3aecf2577eb38a5414a84dac4cbb",
+    "gold": 3,
+    "note": "The answer changes from rapid expansion to rapid contraction. This is a directional concept error under the intended thermal-shock explanation, with identical prompts and option mappings.",
+    "quantized_prediction": 2,
+    "reference_prediction": 3
+  },
+  "ARC-Challenge:Mercury_7159285": {
+    "category": "harmful_flip",
+    "content_hash": "2f719e54b333e8d6c2e7bdc12f7af68bed52711578e9694ce97e76dd5ff58bc3",
+    "gold": 2,
+    "note": "The answer changes from over-fishing/ecosystem damage to increased aquatic populations. The latter is positive, despite the question requesting a negative consequence. This is consistent with qualifier sensitivity, but no internal reasoning was observed.",
+    "quantized_prediction": 3,
+    "reference_prediction": 2
+  },
+  "ARC-Challenge:Mercury_7206938": {
+    "category": "beneficial_flip",
+    "content_hash": "34b4116779f28873abb217fac718ca5882756106b87a7ff73d534d513c1ce006",
+    "gold": 0,
+    "note": "The answer changes from different instruments to acceptable methods for organizing identical data, matching the key. This is a benchmark-beneficial ranking change; no reasoning trace establishes why it occurred.",
+    "quantized_prediction": 0,
+    "reference_prediction": 3
+  },
+  "ARC-Challenge:Mercury_7263638": {
+    "category": "beneficial_flip",
+    "content_hash": "5d61f43fef68aac54826c9a4c30ba8052bb90e4887b80b524dc6f6702c76368d",
+    "gold": 1,
+    "note": "The answer changes from a fluid mantle to Van Allen belts, matching the key. Belts relate to a magnetic environment; they are not uniquely diagnostic of iron-core composition. Treat the label as the benchmark criterion.",
+    "quantized_prediction": 1,
+    "reference_prediction": 0
+  },
+  "ARC-Challenge:Mercury_SC_400032": {
+    "category": "unchanged_correct",
+    "content_hash": "bfc69f3703cd1c7f8bb9f95ffc38eaff01be4f6606f999e214d9c1162e66be75",
+    "gold": 2,
+    "note": "Both identify evaporation. The liquid-to-vapor wording cleanly distinguishes it from the listed distractors.",
+    "quantized_prediction": 2,
+    "reference_prediction": 2
+  },
+  "ARC-Challenge:Mercury_SC_401357": {
+    "category": "beneficial_flip",
+    "content_hash": "576f6490deaea81b2baf7ee8f3aa4b6eee109a8e5009318ba6772e46155da9f0",
+    "gold": 1,
+    "note": "The answer changes from condensation to evaporation, matching the key. Transpiration is also a listed process that returns water to the atmosphere, so the item has a plausible second valid answer. Keep the key unchanged and avoid interpreting its correctness label as an unambiguous scientific judgment.",
+    "quantized_prediction": 1,
+    "reference_prediction": 0
+  },
+  "ARC-Challenge:Mercury_SC_402276": {
+    "category": "unchanged_wrong",
+    "content_hash": "6ef5837d9b225070fb57d82985868a876e4582223b8837b41f9e0b70522b47a6",
+    "gold": 3,
+    "note": "Both choose the cat behavior rather than the keyed food-conditioned aquarium response. The mismatch is in the selected content, not letter remapping. The scores alone do not explain the learned/innate distinction the model used.",
+    "quantized_prediction": 2,
+    "reference_prediction": 2
+  },
+  "ARC-Challenge:NYSEDREGENTS_2013_8_42": {
+    "category": "unchanged_wrong",
+    "content_hash": "f32a34017d03fd2913d29b9e55bbe2bf118c3bd1adf916ce4e0df4c16229ec0b",
+    "gold": 1,
+    "note": "Both select \"move slower\" where the key says faster. Under the intended fixed-force comparison, reducing mass increases acceleration. The item leaves some motion conditions implicit; no label is changed.",
+    "quantized_prediction": 0,
+    "reference_prediction": 0
+  },
+  "ARC-Challenge:TAKS_2009_5_14": {
+    "category": "unchanged_correct",
+    "content_hash": "a3332794ef1abfb3ab35e8aeeaece157747f006e19e90f56cbf2de85f1a2c744",
+    "gold": 0,
+    "note": "Both identify Earth's gravitational pull. This is a straightforward stable answer with no mapping or missing-context concern.",
+    "quantized_prediction": 0,
+    "reference_prediction": 0
+  }
+}

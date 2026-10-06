@@ -1,12 +1,15 @@
 # Execution status
 
-Checkpoint 4: corrected two-model protocol and calibration frozen before resuming held-out scoring.
+Complete: both models, all three precisions, both ARC subsets, calibration-size sensitivity checks, and the paired option-permutation check.
 
-- 19 automated checks pass, including the changed-distractor leakage regression.
-- Both pilots pass; corrected calibration pools retain 400 examples per task.
-- The initial combined-content duplicate rule missed four shared stems. The data-only correction, made before held-out performance review, is documented in [the protocol amendment](../docs/PROTOCOL-AMENDMENT.md).
-- Current artifacts are in `pretest/`; the original freeze is retained in `pretest-v1/`.
-- Both complete test splits are unchanged. Existing raw scores are reused only after exact input and implementation checks, with per-record provenance.
-- Additional spending: $0.
+- 30,888 actual scoring records across 60 completed cells; 2,670,786 input-token evaluations.
+- 19 software tests pass; all 472 acceptance checks pass on the completed archive and on its restored copy.
+- The portable archive restores without model weights. Reanalysis reproduces all numerical result fields exactly; rendering and analysis-source metadata may change as presentation code is revised.
+- Four principal figures, supporting tables, the six-page technical report, and 20 prespecified case reviews are in [measured](measured/).
+- Primary transferred-minus-refitted Brier difference: 0.001749; 95% paired bootstrap interval [-0.003897, 0.008282]. The interval lies inside the prespecified ±0.01 margin, supporting little practical difference for this setup.
+- Summed recorded scoring latency: 4,538 seconds (1.26 hours). This is not total project or wall-clock runtime: loading, warm-up, repeatability passes, tokenization, conversion, and analysis are excluded.
+- Additional spending: $0. No paid cloud resources were used.
 
-Held-out scoring and final analysis are ongoing. No treatment-effect conclusion is claimed yet.
+The data-only [protocol amendment](../docs/PROTOCOL-AMENDMENT.md) tightened cross-split stem checks after scoring began but before any held-out performance review. It excluded 20 source rows in total and preserved both complete official test splits. Calibration was refitted and frozen anew. There are 11,340 reused unchanged records, each with validated original provenance.
+
+The corrected pretest artifacts are in `pretest/`; the original freeze is retained in `pretest-v1/`. The final [reproducibility archive](reproducibility/) includes the migration ledgers and all saved scores, without large model weights. Claims and their source tables are indexed in the [claim audit](measured/CLAIM-AUDIT.md).

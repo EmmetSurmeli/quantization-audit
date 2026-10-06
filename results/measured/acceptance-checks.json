@@ -1,0 +1,1932 @@
+{
+  "checks": [
+    {
+      "check": "No normalized question-stem overlap: pilot/test",
+      "passed": true
+    },
+    {
+      "check": "No normalized question-stem overlap: calibration/test",
+      "passed": true
+    },
+    {
+      "check": "No normalized question-stem overlap: validation/test",
+      "passed": true
+    },
+    {
+      "check": "No normalized question-stem overlap: calibration/validation",
+      "passed": true
+    },
+    {
+      "check": "Unique IDs and normalized content: ARC-Challenge/pilot",
+      "passed": true
+    },
+    {
+      "check": "Unique IDs and normalized content: ARC-Challenge/calibration",
+      "passed": true
+    },
+    {
+      "check": "Unique IDs and normalized content: ARC-Challenge/validation",
+      "passed": true
+    },
+    {
+      "check": "Unique IDs and normalized content: ARC-Challenge/test",
+      "passed": true
+    },
+    {
+      "check": "Permutation subset: ARC-Challenge",
+      "passed": true
+    },
+    {
+      "check": "Unique IDs and normalized content: ARC-Easy/pilot",
+      "passed": true
+    },
+    {
+      "check": "Unique IDs and normalized content: ARC-Easy/calibration",
+      "passed": true
+    },
+    {
+      "check": "Unique IDs and normalized content: ARC-Easy/validation",
+      "passed": true
+    },
+    {
+      "check": "Unique IDs and normalized content: ARC-Easy/test",
+      "passed": true
+    },
+    {
+      "check": "Permutation subset: ARC-Easy",
+      "passed": true
+    },
+    {
+      "check": "Frozen calibration: primary",
+      "passed": true
+    },
+    {
+      "check": "Artifact identity: primary/16",
+      "passed": true
+    },
+    {
+      "check": "Quantizer layout: primary/16",
+      "passed": true
+    },
+    {
+      "check": "Artifact identity: primary/8",
+      "passed": true
+    },
+    {
+      "check": "Quantizer layout: primary/8",
+      "passed": true
+    },
+    {
+      "check": "Artifact identity: primary/4",
+      "passed": true
+    },
+    {
+      "check": "Quantizer layout: primary/4",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: primary/16/ARC-Challenge/pilot",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: primary/16/ARC-Challenge/pilot",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: primary/16/ARC-Challenge/pilot",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: primary/16/ARC-Challenge/pilot",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: primary/16/ARC-Challenge/pilot",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/16/ARC-Challenge/pilot T=6.69707254",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/16/ARC-Challenge/pilot T=6.69707254",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: primary/8/ARC-Challenge/pilot",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: primary/8/ARC-Challenge/pilot",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: primary/8/ARC-Challenge/pilot",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: primary/8/ARC-Challenge/pilot",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: primary/8/ARC-Challenge/pilot",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/8/ARC-Challenge/pilot T=6.69707254",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/8/ARC-Challenge/pilot T=6.75958686",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: primary/4/ARC-Challenge/pilot",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: primary/4/ARC-Challenge/pilot",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: primary/4/ARC-Challenge/pilot",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: primary/4/ARC-Challenge/pilot",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: primary/4/ARC-Challenge/pilot",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/4/ARC-Challenge/pilot T=6.69707254",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/4/ARC-Challenge/pilot T=5.26007182",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: primary/16/ARC-Challenge/calibration",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: primary/16/ARC-Challenge/calibration",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: primary/16/ARC-Challenge/calibration",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: primary/16/ARC-Challenge/calibration",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: primary/16/ARC-Challenge/calibration",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/16/ARC-Challenge/calibration T=6.69707254",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/16/ARC-Challenge/calibration T=6.69707254",
+      "passed": true
+    },
+    {
+      "check": "Calibration scores match fit: primary/16/ARC-Challenge/calibration",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: primary/8/ARC-Challenge/calibration",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: primary/8/ARC-Challenge/calibration",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: primary/8/ARC-Challenge/calibration",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: primary/8/ARC-Challenge/calibration",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: primary/8/ARC-Challenge/calibration",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/8/ARC-Challenge/calibration T=6.69707254",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/8/ARC-Challenge/calibration T=6.75958686",
+      "passed": true
+    },
+    {
+      "check": "Calibration scores match fit: primary/8/ARC-Challenge/calibration",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: primary/4/ARC-Challenge/calibration",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: primary/4/ARC-Challenge/calibration",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: primary/4/ARC-Challenge/calibration",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: primary/4/ARC-Challenge/calibration",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: primary/4/ARC-Challenge/calibration",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/4/ARC-Challenge/calibration T=6.69707254",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/4/ARC-Challenge/calibration T=5.26007182",
+      "passed": true
+    },
+    {
+      "check": "Calibration scores match fit: primary/4/ARC-Challenge/calibration",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: primary/16/ARC-Challenge/validation",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: primary/16/ARC-Challenge/validation",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: primary/16/ARC-Challenge/validation",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: primary/16/ARC-Challenge/validation",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: primary/16/ARC-Challenge/validation",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/16/ARC-Challenge/validation T=6.69707254",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/16/ARC-Challenge/validation T=6.69707254",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: primary/8/ARC-Challenge/validation",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: primary/8/ARC-Challenge/validation",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: primary/8/ARC-Challenge/validation",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: primary/8/ARC-Challenge/validation",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: primary/8/ARC-Challenge/validation",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/8/ARC-Challenge/validation T=6.69707254",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/8/ARC-Challenge/validation T=6.75958686",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: primary/4/ARC-Challenge/validation",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: primary/4/ARC-Challenge/validation",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: primary/4/ARC-Challenge/validation",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: primary/4/ARC-Challenge/validation",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: primary/4/ARC-Challenge/validation",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/4/ARC-Challenge/validation T=6.69707254",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/4/ARC-Challenge/validation T=5.26007182",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: primary/16/ARC-Challenge/test",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: primary/16/ARC-Challenge/test",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: primary/16/ARC-Challenge/test",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: primary/16/ARC-Challenge/test",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: primary/16/ARC-Challenge/test",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/16/ARC-Challenge/test T=6.69707254",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/16/ARC-Challenge/test T=6.69707254",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: primary/8/ARC-Challenge/test",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: primary/8/ARC-Challenge/test",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: primary/8/ARC-Challenge/test",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: primary/8/ARC-Challenge/test",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: primary/8/ARC-Challenge/test",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/8/ARC-Challenge/test T=6.69707254",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/8/ARC-Challenge/test T=6.75958686",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: primary/4/ARC-Challenge/test",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: primary/4/ARC-Challenge/test",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: primary/4/ARC-Challenge/test",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: primary/4/ARC-Challenge/test",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: primary/4/ARC-Challenge/test",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/4/ARC-Challenge/test T=6.69707254",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/4/ARC-Challenge/test T=5.26007182",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: primary/16/ARC-Challenge/robustness",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: primary/16/ARC-Challenge/robustness",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: primary/16/ARC-Challenge/robustness",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: primary/16/ARC-Challenge/robustness",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: primary/16/ARC-Challenge/robustness",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/16/ARC-Challenge/robustness T=6.69707254",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/16/ARC-Challenge/robustness T=6.69707254",
+      "passed": true
+    },
+    {
+      "check": "Permutation preserves answer meaning: primary/16/ARC-Challenge/robustness",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: primary/8/ARC-Challenge/robustness",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: primary/8/ARC-Challenge/robustness",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: primary/8/ARC-Challenge/robustness",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: primary/8/ARC-Challenge/robustness",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: primary/8/ARC-Challenge/robustness",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/8/ARC-Challenge/robustness T=6.69707254",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/8/ARC-Challenge/robustness T=6.75958686",
+      "passed": true
+    },
+    {
+      "check": "Permutation preserves answer meaning: primary/8/ARC-Challenge/robustness",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: primary/4/ARC-Challenge/robustness",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: primary/4/ARC-Challenge/robustness",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: primary/4/ARC-Challenge/robustness",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: primary/4/ARC-Challenge/robustness",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: primary/4/ARC-Challenge/robustness",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/4/ARC-Challenge/robustness T=6.69707254",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/4/ARC-Challenge/robustness T=5.26007182",
+      "passed": true
+    },
+    {
+      "check": "Permutation preserves answer meaning: primary/4/ARC-Challenge/robustness",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: primary/16/ARC-Easy/pilot",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: primary/16/ARC-Easy/pilot",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: primary/16/ARC-Easy/pilot",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: primary/16/ARC-Easy/pilot",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: primary/16/ARC-Easy/pilot",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/16/ARC-Easy/pilot T=4.99821463",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/16/ARC-Easy/pilot T=4.99821463",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: primary/8/ARC-Easy/pilot",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: primary/8/ARC-Easy/pilot",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: primary/8/ARC-Easy/pilot",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: primary/8/ARC-Easy/pilot",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: primary/8/ARC-Easy/pilot",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/8/ARC-Easy/pilot T=4.99821463",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/8/ARC-Easy/pilot T=4.92357535",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: primary/4/ARC-Easy/pilot",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: primary/4/ARC-Easy/pilot",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: primary/4/ARC-Easy/pilot",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: primary/4/ARC-Easy/pilot",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: primary/4/ARC-Easy/pilot",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/4/ARC-Easy/pilot T=4.99821463",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/4/ARC-Easy/pilot T=3.90157320",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: primary/16/ARC-Easy/calibration",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: primary/16/ARC-Easy/calibration",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: primary/16/ARC-Easy/calibration",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: primary/16/ARC-Easy/calibration",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: primary/16/ARC-Easy/calibration",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/16/ARC-Easy/calibration T=4.99821463",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/16/ARC-Easy/calibration T=4.99821463",
+      "passed": true
+    },
+    {
+      "check": "Calibration scores match fit: primary/16/ARC-Easy/calibration",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: primary/8/ARC-Easy/calibration",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: primary/8/ARC-Easy/calibration",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: primary/8/ARC-Easy/calibration",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: primary/8/ARC-Easy/calibration",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: primary/8/ARC-Easy/calibration",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/8/ARC-Easy/calibration T=4.99821463",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/8/ARC-Easy/calibration T=4.92357535",
+      "passed": true
+    },
+    {
+      "check": "Calibration scores match fit: primary/8/ARC-Easy/calibration",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: primary/4/ARC-Easy/calibration",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: primary/4/ARC-Easy/calibration",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: primary/4/ARC-Easy/calibration",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: primary/4/ARC-Easy/calibration",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: primary/4/ARC-Easy/calibration",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/4/ARC-Easy/calibration T=4.99821463",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/4/ARC-Easy/calibration T=3.90157320",
+      "passed": true
+    },
+    {
+      "check": "Calibration scores match fit: primary/4/ARC-Easy/calibration",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: primary/16/ARC-Easy/validation",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: primary/16/ARC-Easy/validation",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: primary/16/ARC-Easy/validation",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: primary/16/ARC-Easy/validation",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: primary/16/ARC-Easy/validation",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/16/ARC-Easy/validation T=4.99821463",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/16/ARC-Easy/validation T=4.99821463",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: primary/8/ARC-Easy/validation",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: primary/8/ARC-Easy/validation",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: primary/8/ARC-Easy/validation",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: primary/8/ARC-Easy/validation",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: primary/8/ARC-Easy/validation",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/8/ARC-Easy/validation T=4.99821463",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/8/ARC-Easy/validation T=4.92357535",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: primary/4/ARC-Easy/validation",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: primary/4/ARC-Easy/validation",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: primary/4/ARC-Easy/validation",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: primary/4/ARC-Easy/validation",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: primary/4/ARC-Easy/validation",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/4/ARC-Easy/validation T=4.99821463",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/4/ARC-Easy/validation T=3.90157320",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: primary/16/ARC-Easy/test",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: primary/16/ARC-Easy/test",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: primary/16/ARC-Easy/test",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: primary/16/ARC-Easy/test",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: primary/16/ARC-Easy/test",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/16/ARC-Easy/test T=4.99821463",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/16/ARC-Easy/test T=4.99821463",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: primary/8/ARC-Easy/test",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: primary/8/ARC-Easy/test",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: primary/8/ARC-Easy/test",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: primary/8/ARC-Easy/test",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: primary/8/ARC-Easy/test",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/8/ARC-Easy/test T=4.99821463",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/8/ARC-Easy/test T=4.92357535",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: primary/4/ARC-Easy/test",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: primary/4/ARC-Easy/test",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: primary/4/ARC-Easy/test",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: primary/4/ARC-Easy/test",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: primary/4/ARC-Easy/test",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/4/ARC-Easy/test T=4.99821463",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/4/ARC-Easy/test T=3.90157320",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: primary/16/ARC-Easy/robustness",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: primary/16/ARC-Easy/robustness",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: primary/16/ARC-Easy/robustness",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: primary/16/ARC-Easy/robustness",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: primary/16/ARC-Easy/robustness",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/16/ARC-Easy/robustness T=4.99821463",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/16/ARC-Easy/robustness T=4.99821463",
+      "passed": true
+    },
+    {
+      "check": "Permutation preserves answer meaning: primary/16/ARC-Easy/robustness",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: primary/8/ARC-Easy/robustness",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: primary/8/ARC-Easy/robustness",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: primary/8/ARC-Easy/robustness",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: primary/8/ARC-Easy/robustness",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: primary/8/ARC-Easy/robustness",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/8/ARC-Easy/robustness T=4.99821463",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/8/ARC-Easy/robustness T=4.92357535",
+      "passed": true
+    },
+    {
+      "check": "Permutation preserves answer meaning: primary/8/ARC-Easy/robustness",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: primary/4/ARC-Easy/robustness",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: primary/4/ARC-Easy/robustness",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: primary/4/ARC-Easy/robustness",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: primary/4/ARC-Easy/robustness",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: primary/4/ARC-Easy/robustness",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/4/ARC-Easy/robustness T=4.99821463",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: primary/4/ARC-Easy/robustness T=3.90157320",
+      "passed": true
+    },
+    {
+      "check": "Permutation preserves answer meaning: primary/4/ARC-Easy/robustness",
+      "passed": true
+    },
+    {
+      "check": "Frozen calibration: replication",
+      "passed": true
+    },
+    {
+      "check": "Artifact identity: replication/16",
+      "passed": true
+    },
+    {
+      "check": "Quantizer layout: replication/16",
+      "passed": true
+    },
+    {
+      "check": "Artifact identity: replication/8",
+      "passed": true
+    },
+    {
+      "check": "Quantizer layout: replication/8",
+      "passed": true
+    },
+    {
+      "check": "Artifact identity: replication/4",
+      "passed": true
+    },
+    {
+      "check": "Quantizer layout: replication/4",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: replication/16/ARC-Challenge/pilot",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: replication/16/ARC-Challenge/pilot",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: replication/16/ARC-Challenge/pilot",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: replication/16/ARC-Challenge/pilot",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: replication/16/ARC-Challenge/pilot",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/16/ARC-Challenge/pilot T=6.42659453",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/16/ARC-Challenge/pilot T=6.42659453",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: replication/8/ARC-Challenge/pilot",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: replication/8/ARC-Challenge/pilot",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: replication/8/ARC-Challenge/pilot",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: replication/8/ARC-Challenge/pilot",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: replication/8/ARC-Challenge/pilot",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/8/ARC-Challenge/pilot T=6.42659453",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/8/ARC-Challenge/pilot T=6.18138437",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: replication/4/ARC-Challenge/pilot",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: replication/4/ARC-Challenge/pilot",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: replication/4/ARC-Challenge/pilot",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: replication/4/ARC-Challenge/pilot",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: replication/4/ARC-Challenge/pilot",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/4/ARC-Challenge/pilot T=6.42659453",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/4/ARC-Challenge/pilot T=6.85332620",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: replication/16/ARC-Challenge/calibration",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: replication/16/ARC-Challenge/calibration",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: replication/16/ARC-Challenge/calibration",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: replication/16/ARC-Challenge/calibration",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: replication/16/ARC-Challenge/calibration",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/16/ARC-Challenge/calibration T=6.42659453",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/16/ARC-Challenge/calibration T=6.42659453",
+      "passed": true
+    },
+    {
+      "check": "Calibration scores match fit: replication/16/ARC-Challenge/calibration",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: replication/8/ARC-Challenge/calibration",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: replication/8/ARC-Challenge/calibration",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: replication/8/ARC-Challenge/calibration",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: replication/8/ARC-Challenge/calibration",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: replication/8/ARC-Challenge/calibration",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/8/ARC-Challenge/calibration T=6.42659453",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/8/ARC-Challenge/calibration T=6.18138437",
+      "passed": true
+    },
+    {
+      "check": "Calibration scores match fit: replication/8/ARC-Challenge/calibration",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: replication/4/ARC-Challenge/calibration",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: replication/4/ARC-Challenge/calibration",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: replication/4/ARC-Challenge/calibration",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: replication/4/ARC-Challenge/calibration",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: replication/4/ARC-Challenge/calibration",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/4/ARC-Challenge/calibration T=6.42659453",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/4/ARC-Challenge/calibration T=6.85332620",
+      "passed": true
+    },
+    {
+      "check": "Calibration scores match fit: replication/4/ARC-Challenge/calibration",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: replication/16/ARC-Challenge/validation",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: replication/16/ARC-Challenge/validation",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: replication/16/ARC-Challenge/validation",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: replication/16/ARC-Challenge/validation",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: replication/16/ARC-Challenge/validation",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/16/ARC-Challenge/validation T=6.42659453",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/16/ARC-Challenge/validation T=6.42659453",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: replication/8/ARC-Challenge/validation",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: replication/8/ARC-Challenge/validation",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: replication/8/ARC-Challenge/validation",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: replication/8/ARC-Challenge/validation",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: replication/8/ARC-Challenge/validation",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/8/ARC-Challenge/validation T=6.42659453",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/8/ARC-Challenge/validation T=6.18138437",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: replication/4/ARC-Challenge/validation",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: replication/4/ARC-Challenge/validation",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: replication/4/ARC-Challenge/validation",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: replication/4/ARC-Challenge/validation",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: replication/4/ARC-Challenge/validation",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/4/ARC-Challenge/validation T=6.42659453",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/4/ARC-Challenge/validation T=6.85332620",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: replication/16/ARC-Challenge/test",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: replication/16/ARC-Challenge/test",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: replication/16/ARC-Challenge/test",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: replication/16/ARC-Challenge/test",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: replication/16/ARC-Challenge/test",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/16/ARC-Challenge/test T=6.42659453",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/16/ARC-Challenge/test T=6.42659453",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: replication/8/ARC-Challenge/test",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: replication/8/ARC-Challenge/test",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: replication/8/ARC-Challenge/test",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: replication/8/ARC-Challenge/test",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: replication/8/ARC-Challenge/test",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/8/ARC-Challenge/test T=6.42659453",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/8/ARC-Challenge/test T=6.18138437",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: replication/4/ARC-Challenge/test",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: replication/4/ARC-Challenge/test",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: replication/4/ARC-Challenge/test",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: replication/4/ARC-Challenge/test",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: replication/4/ARC-Challenge/test",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/4/ARC-Challenge/test T=6.42659453",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/4/ARC-Challenge/test T=6.85332620",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: replication/16/ARC-Challenge/robustness",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: replication/16/ARC-Challenge/robustness",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: replication/16/ARC-Challenge/robustness",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: replication/16/ARC-Challenge/robustness",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: replication/16/ARC-Challenge/robustness",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/16/ARC-Challenge/robustness T=6.42659453",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/16/ARC-Challenge/robustness T=6.42659453",
+      "passed": true
+    },
+    {
+      "check": "Permutation preserves answer meaning: replication/16/ARC-Challenge/robustness",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: replication/8/ARC-Challenge/robustness",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: replication/8/ARC-Challenge/robustness",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: replication/8/ARC-Challenge/robustness",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: replication/8/ARC-Challenge/robustness",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: replication/8/ARC-Challenge/robustness",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/8/ARC-Challenge/robustness T=6.42659453",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/8/ARC-Challenge/robustness T=6.18138437",
+      "passed": true
+    },
+    {
+      "check": "Permutation preserves answer meaning: replication/8/ARC-Challenge/robustness",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: replication/4/ARC-Challenge/robustness",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: replication/4/ARC-Challenge/robustness",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: replication/4/ARC-Challenge/robustness",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: replication/4/ARC-Challenge/robustness",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: replication/4/ARC-Challenge/robustness",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/4/ARC-Challenge/robustness T=6.42659453",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/4/ARC-Challenge/robustness T=6.85332620",
+      "passed": true
+    },
+    {
+      "check": "Permutation preserves answer meaning: replication/4/ARC-Challenge/robustness",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: replication/16/ARC-Easy/pilot",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: replication/16/ARC-Easy/pilot",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: replication/16/ARC-Easy/pilot",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: replication/16/ARC-Easy/pilot",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: replication/16/ARC-Easy/pilot",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/16/ARC-Easy/pilot T=5.22093490",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/16/ARC-Easy/pilot T=5.22093490",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: replication/8/ARC-Easy/pilot",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: replication/8/ARC-Easy/pilot",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: replication/8/ARC-Easy/pilot",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: replication/8/ARC-Easy/pilot",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: replication/8/ARC-Easy/pilot",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/8/ARC-Easy/pilot T=5.22093490",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/8/ARC-Easy/pilot T=5.08316477",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: replication/4/ARC-Easy/pilot",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: replication/4/ARC-Easy/pilot",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: replication/4/ARC-Easy/pilot",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: replication/4/ARC-Easy/pilot",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: replication/4/ARC-Easy/pilot",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/4/ARC-Easy/pilot T=5.22093490",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/4/ARC-Easy/pilot T=5.29609060",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: replication/16/ARC-Easy/calibration",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: replication/16/ARC-Easy/calibration",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: replication/16/ARC-Easy/calibration",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: replication/16/ARC-Easy/calibration",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: replication/16/ARC-Easy/calibration",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/16/ARC-Easy/calibration T=5.22093490",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/16/ARC-Easy/calibration T=5.22093490",
+      "passed": true
+    },
+    {
+      "check": "Calibration scores match fit: replication/16/ARC-Easy/calibration",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: replication/8/ARC-Easy/calibration",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: replication/8/ARC-Easy/calibration",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: replication/8/ARC-Easy/calibration",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: replication/8/ARC-Easy/calibration",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: replication/8/ARC-Easy/calibration",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/8/ARC-Easy/calibration T=5.22093490",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/8/ARC-Easy/calibration T=5.08316477",
+      "passed": true
+    },
+    {
+      "check": "Calibration scores match fit: replication/8/ARC-Easy/calibration",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: replication/4/ARC-Easy/calibration",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: replication/4/ARC-Easy/calibration",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: replication/4/ARC-Easy/calibration",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: replication/4/ARC-Easy/calibration",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: replication/4/ARC-Easy/calibration",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/4/ARC-Easy/calibration T=5.22093490",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/4/ARC-Easy/calibration T=5.29609060",
+      "passed": true
+    },
+    {
+      "check": "Calibration scores match fit: replication/4/ARC-Easy/calibration",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: replication/16/ARC-Easy/validation",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: replication/16/ARC-Easy/validation",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: replication/16/ARC-Easy/validation",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: replication/16/ARC-Easy/validation",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: replication/16/ARC-Easy/validation",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/16/ARC-Easy/validation T=5.22093490",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/16/ARC-Easy/validation T=5.22093490",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: replication/8/ARC-Easy/validation",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: replication/8/ARC-Easy/validation",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: replication/8/ARC-Easy/validation",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: replication/8/ARC-Easy/validation",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: replication/8/ARC-Easy/validation",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/8/ARC-Easy/validation T=5.22093490",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/8/ARC-Easy/validation T=5.08316477",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: replication/4/ARC-Easy/validation",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: replication/4/ARC-Easy/validation",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: replication/4/ARC-Easy/validation",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: replication/4/ARC-Easy/validation",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: replication/4/ARC-Easy/validation",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/4/ARC-Easy/validation T=5.22093490",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/4/ARC-Easy/validation T=5.29609060",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: replication/16/ARC-Easy/test",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: replication/16/ARC-Easy/test",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: replication/16/ARC-Easy/test",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: replication/16/ARC-Easy/test",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: replication/16/ARC-Easy/test",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/16/ARC-Easy/test T=5.22093490",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/16/ARC-Easy/test T=5.22093490",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: replication/8/ARC-Easy/test",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: replication/8/ARC-Easy/test",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: replication/8/ARC-Easy/test",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: replication/8/ARC-Easy/test",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: replication/8/ARC-Easy/test",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/8/ARC-Easy/test T=5.22093490",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/8/ARC-Easy/test T=5.08316477",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: replication/4/ARC-Easy/test",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: replication/4/ARC-Easy/test",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: replication/4/ARC-Easy/test",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: replication/4/ARC-Easy/test",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: replication/4/ARC-Easy/test",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/4/ARC-Easy/test T=5.22093490",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/4/ARC-Easy/test T=5.29609060",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: replication/16/ARC-Easy/robustness",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: replication/16/ARC-Easy/robustness",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: replication/16/ARC-Easy/robustness",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: replication/16/ARC-Easy/robustness",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: replication/16/ARC-Easy/robustness",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/16/ARC-Easy/robustness T=5.22093490",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/16/ARC-Easy/robustness T=5.22093490",
+      "passed": true
+    },
+    {
+      "check": "Permutation preserves answer meaning: replication/16/ARC-Easy/robustness",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: replication/8/ARC-Easy/robustness",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: replication/8/ARC-Easy/robustness",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: replication/8/ARC-Easy/robustness",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: replication/8/ARC-Easy/robustness",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: replication/8/ARC-Easy/robustness",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/8/ARC-Easy/robustness T=5.22093490",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/8/ARC-Easy/robustness T=5.08316477",
+      "passed": true
+    },
+    {
+      "check": "Permutation preserves answer meaning: replication/8/ARC-Easy/robustness",
+      "passed": true
+    },
+    {
+      "check": "Frozen scoring provenance: replication/4/ARC-Easy/robustness",
+      "passed": true
+    },
+    {
+      "check": "Cell and model identity: replication/4/ARC-Easy/robustness",
+      "passed": true
+    },
+    {
+      "check": "Reused raw-score integrity: replication/4/ARC-Easy/robustness",
+      "passed": true
+    },
+    {
+      "check": "Valid probabilities: replication/4/ARC-Easy/robustness",
+      "passed": true
+    },
+    {
+      "check": "No truncation / valid diagnostics: replication/4/ARC-Easy/robustness",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/4/ARC-Easy/robustness T=5.22093490",
+      "passed": true
+    },
+    {
+      "check": "Temperature preserves choices: replication/4/ARC-Easy/robustness T=5.29609060",
+      "passed": true
+    },
+    {
+      "check": "Permutation preserves answer meaning: replication/4/ARC-Easy/robustness",
+      "passed": true
+    }
+  ],
+  "checks_count": 472,
+  "input_token_evaluations": 2670786,
+  "measured_scoring_seconds": 4538.123252750607,
+  "passed": true,
+  "quantization_coverage": [
+    {
+      "bits": 16,
+      "model": "primary",
+      "quantized_modules": 0
+    },
+    {
+      "bits": 8,
+      "model": "primary",
+      "quantized_modules": 253
+    },
+    {
+      "bits": 4,
+      "model": "primary",
+      "quantized_modules": 253
+    },
+    {
+      "bits": 16,
+      "model": "replication",
+      "quantized_modules": 0
+    },
+    {
+      "bits": 8,
+      "model": "replication",
+      "quantized_modules": 197
+    },
+    {
+      "bits": 4,
+      "model": "replication",
+      "quantized_modules": 197
+    }
+  ],
+  "reused_unchanged_records": 11340,
+  "scope": "Actual completed archive; immutable artifact manifests are verified, but weights are not reloaded.",
+  "scoring_records": 30888,
+  "warmups_and_repeatability_passes_excluded": true
+}

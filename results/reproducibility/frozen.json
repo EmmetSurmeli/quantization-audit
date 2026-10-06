@@ -1,0 +1,33 @@
+{
+  "calibration_hashes": {
+    "primary": "d5707937cd4505cfb31fe94d54ee5d44dec5f6b04603daf7a1070ed8ab1b4db8",
+    "replication": "137f20a7c5c2ff78772fdd41cdce195138f33d92e57af99ee9f6d2b6f927abf7"
+  },
+  "identity": {
+    "config": "68bc4983944702d08eeab11d9e02cd0ea5b6c9baf64b05357f3c593da8f6d885",
+    "environment": {
+      "machine": "arm64",
+      "packages": {
+        "datasets": "4.8.5",
+        "huggingface-hub": "1.32.0",
+        "matplotlib": "3.10.8",
+        "mlx": "0.32.3",
+        "mlx-lm": "0.31.3",
+        "numpy": "2.4.3",
+        "quantization-audit": "0.1.0",
+        "scipy": "1.17.1",
+        "transformers": "5.18.0"
+      },
+      "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+      "python": "3.13.5"
+    },
+    "pins": "86ea5938bd2fa35b1dd49e8d7aeb6d6b87bf7dd936784839206b3016095ce7f9",
+    "scoring_source": "5dd64fe9747cb2627c9a2c9c3fd128ebe8a94571665913a987c0cdb98dea387d",
+    "splits": "491451a8307592f022e72aa1350733a306ec512013bff36e401f792629736e45"
+  },
+  "pilot_gate_hash": "f3546b773ea2b137b24985a776eb88b893268b2e8540bcc7e858b19493bde6ae",
+  "roles": [
+    "primary",
+    "replication"
+  ]
+}

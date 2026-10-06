@@ -1,0 +1,71 @@
+{
+  "artifact_hash": "4e58ceed88403c6f2473374cfc839f71ca0efb3329b2bc664ddbd7a12a058874",
+  "environment": {
+    "machine": "arm64",
+    "packages": {
+      "datasets": "4.8.5",
+      "huggingface-hub": "1.32.0",
+      "matplotlib": "3.10.8",
+      "mlx": "0.32.3",
+      "mlx-lm": "0.31.3",
+      "numpy": "2.4.3",
+      "quantization-audit": "0.1.0",
+      "scipy": "1.17.1",
+      "transformers": "5.18.0"
+    },
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "python": "3.13.5"
+  },
+  "files": {
+    "README.md": {
+      "bytes": 81,
+      "sha256": "748c964f9b7e5f2c3770ce013bbc0153be7c54311d9692c343b6188eefe77ac6"
+    },
+    "chat_template.jinja": {
+      "bytes": 4168,
+      "sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8"
+    },
+    "config.json": {
+      "bytes": 816,
+      "sha256": "2c76bf5093edd24543889d86fc21388837bcf6fbe5fed6848ff42ba4eb3c2838"
+    },
+    "generation_config.json": {
+      "bytes": 239,
+      "sha256": "2325da0f15bb848e018c5ae071b7943332e9f871d6b60e2ed22ca97d4cb993d2"
+    },
+    "model-00001-of-00002.safetensors": {
+      "bytes": 5321133607,
+      "sha256": "8769f2551e5c77b637e91dd6dcf25ef5a7fd11d67aec46418e2ddd71a7941a68"
+    },
+    "model-00002-of-00002.safetensors": {
+      "bytes": 2723848286,
+      "sha256": "c29469a393b2df3f4586eb238ae6650ad03d7e9b8219596fcab4c05e91441b37"
+    },
+    "model.safetensors.index.json": {
+      "bytes": 34462,
+      "sha256": "5e699a61da09415f33a625885364d3889a80acb6ab88aedaf6e195b2612addf4"
+    },
+    "tokenizer.json": {
+      "bytes": 11422650,
+      "sha256": "be75606093db2094d7cd20f3c2f385c212750648bd6ea4fb2bf507a6a4c55506"
+    },
+    "tokenizer_config.json": {
+      "bytes": 729,
+      "sha256": "ee8f6d44bf2353e6d3686c3adaf70e1ccfe9e6ed6822d0ab2f28cafdd7754792"
+    }
+  },
+  "quantized_modules": [],
+  "serialized_bytes": 8056445038,
+  "spec": {
+    "bits": 16,
+    "pin": {
+      "repo": "Qwen/Qwen3-4B",
+      "revision": "1cfa9a7208912126459214e8b04321603b3df60c"
+    },
+    "quantization": {
+      "group_size": 64,
+      "mode": "affine",
+      "reference_dtype": "bfloat16"
+    }
+  }
+}

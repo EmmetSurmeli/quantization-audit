@@ -46,8 +46,8 @@ def table(headers,rows,widths=None):
     t.setStyle(TableStyle([
         ('BACKGROUND',(0,0),(-1,0),INK),('VALIGN',(0,0),(-1,-1),'TOP'),
         ('ROWBACKGROUNDS',(0,1),(-1,-1),[colors.white,PALE]),
-        ('LINEBELOW',(0,0),(-1,0),.5,INK),('BOTTOMPADDING',(0,0),(-1,-1),6),
-        ('TOPPADDING',(0,0),(-1,-1),6),('LEFTPADDING',(0,0),(-1,-1),7),
+        ('LINEBELOW',(0,0),(-1,0),.5,INK),('BOTTOMPADDING',(0,0),(-1,-1),3),
+        ('TOPPADDING',(0,0),(-1,-1),3),('LEFTPADDING',(0,0),(-1,-1),7),
         ('RIGHTPADDING',(0,0),(-1,-1),7),
     ]))
     return t
@@ -109,7 +109,8 @@ def build(results,provenance):
         p('Temperature scaling [1], quantization-induced confidence changes [2], and calibration repair [3] are '
           'established. Our contribution is an applied replication and extension: paired transfer evaluation, '
           'label-budget sensitivity, and deployment measurements in a reproducible local MLX pipeline. '
-          'We do not establish that this combination is unprecedented.'),
+          'We do not establish that this combination is unprecedented. Preserving BF16 score behavior [4] '
+          'and improving correctness calibration against labels are different objectives.'),
         p('What the endpoint measures','h2'),
         p('For question i and available option k, p<sub>ik</sub>(T) = softmax(z<sub>i</sub>/T)<sub>k</sub>. '
           'Brier = mean<sub>i</sub> sum<sub>k</sub> (p<sub>ik</sub> - 1[y<sub>i</sub>=k])<super>2</super>. '
@@ -127,7 +128,8 @@ def build(results,provenance):
           'are normalized over the available options; no question is silently truncated.'),
         figure(results/'figure-1-accuracy-flips.png',width=490),
         p('Figure 1. Qwen3-4B accuracy and paired prediction transitions relative to BF16. Counts below retain '
-          'the question as the unit of observation. Changed predictions can cancel in aggregate accuracy.','small'))
+          'the question as the unit of observation. On Challenge, 4-bit accuracy drops by 2.73 percentage points '
+          'for 4B and 7.68 points for 1.7B. Calibration cannot reverse these prediction changes.','small'))
     rows=[]
     for role in roles:
         for d in ds:
@@ -136,7 +138,7 @@ def build(results,provenance):
     add(table(['Model','Subset','Test n','BF16 acc.','4-bit acc.','Beneficial / harmful'],rows,[98,83,50,77,77,137]),
         Spacer(1,7),p('Data separation. Each ARC subset [5] contributes 100 training questions to the pilot, '
           '400 different training questions to calibration, and 100 validation questions to pre-test checks. '
-          f'Global ID/content screening excluded {len(splits["exclusions"])} duplicate records; all 1,172 Challenge '
+          f'Global screening excluded {len(splits["exclusions"])} exact-content or cross-split stem matches; all 1,172 Challenge '
           'and 2,376 Easy test questions remain. The 200-question permutation subset per task is chosen deterministically. '
           'Both models passed the pilot. An initial freeze preceded test scoring; a data-only stem-overlap '
           'amendment preceded all held-out performance review. Calibration was refitted and frozen anew; '
@@ -181,7 +183,8 @@ def build(results,provenance):
     add(table(['Subset','Calibration n','Mean refitted Brier','Range over subsets'],rows,[105,90,155,172]),
         Spacer(1,7),p('The subsets overlap and share one test set. They measure sensitivity to label selection; '
           'they are not ten independent replications. The 400-example fit is a reference, not a proven optimum. '
-          'A favorable small subset cannot establish a label-efficiency claim by itself. '
+          'The 50-example curves are more variable; some primary-task fits are over 0.01 worse than the '
+          '400-example refit. The 100/200-example curves are tighter in these subsets, without establishing a universal budget. '
           f"{sum(x.get('at_boundary',False) for x in r['sample_size_curves'])} of {len(r['sample_size_curves'])} "
           'sample-curve rows reach a temperature boundary (rows share fits and are not independent). '
           'Boundary flags and exact temperatures are saved in sample-size.csv.','small'))
@@ -229,16 +232,20 @@ def build(results,provenance):
     for role in roles:
         for d in ds:
             x=next(x for x in r['robustness'] if x['model']==role and x['dataset']==d and x['bits']==4 and x['treatment']=='refitted')
-            rows.append([model_names[role],d.replace('ARC-',''),x['n_pairs'],f(x['paired_brier_change']),f(x['permuted_accuracy']-x['original_accuracy'])])
-    add(table(['Model','Subset','Pairs','Brier change','Accuracy change'],rows,[120,100,52,125,125]),
-        Spacer(1,6),p('One prespecified nonidentity option permutation per question. Changes are permuted minus '
-          'original on the same 200-question subset; the frozen temperature is reused. These descriptive '
+            transferred=next(v for v in r['robustness'] if v['model']==role and v['dataset']==d and v['bits']==4 and v['treatment']=='transferred')
+            benefits=f(transferred['original_brier']-x['original_brier'])+' / '+f(transferred['permuted_brier']-x['permuted_brier'])
+            rows.append([model_names[role],d.replace('ARC-',''),x['n_pairs'],benefits,f(x['permuted_accuracy']-x['original_accuracy'])])
+    add(table(['Model','Subset','Pairs','Benefit: orig. / perm.','Accuracy change'],rows,[112,87,43,155,125]),
+        Spacer(1,6),p('One prespecified nonidentity option permutation per question. Benefit is transferred minus '
+          'refitted Brier on each version; positive favors refitting. Accuracy change is permuted minus original '
+          'on the same 200-question subset. Frozen temperatures are reused. These descriptive '
           'paired checks are not 400 independent examples. Full precision/treatment results are in robustness.csv.','small'),
         p('Error inspection and scope','h2'),
         p(f'{len(r["error_cases"])} cases were selected by a fixed rule: up to five each of unchanged-correct, '
           'unchanged-wrong, beneficial flips, and harmful flips in the primary comparison. The supporting '
           'case review records questions, original labels, canonical mappings, selected answers, and probabilities. '
-          'No generated reasoning was collected; explanations of why a model changed its answer are hypotheses.'),
+          'It flags a water-cycle item where both evaporation and transpiration are valid, and a clear ion-charge '
+          'error after quantization. Mappings match and labels are unchanged. No reasoning traces establish why a flip occurred.'),
         p('Benchmark contamination remains unresolved. Paired comparisons control many implementation differences '
           'but cannot remove pretraining exposure. Exact normalized-content deduplication does not detect all '
           'semantic duplicates. Two related ARC subsets and two sizes of one family do not establish generality. '

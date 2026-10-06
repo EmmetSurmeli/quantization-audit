@@ -1,0 +1,80 @@
+{
+  "bootstrap_replicates": 2000,
+  "budget": {
+    "automatic_spend_dollars": 0,
+    "dollars": 50,
+    "max_peak_memory_gb": 18,
+    "max_runtime_hours": 24,
+    "overhead_factor": 1.25
+  },
+  "calibration_seeds": 10,
+  "calibration_sizes": [
+    50,
+    100,
+    200,
+    400
+  ],
+  "confidence_thresholds": [
+    0.5,
+    0.7,
+    0.9
+  ],
+  "counts": {
+    "calibration": 400,
+    "pilot": 100,
+    "robustness": 200,
+    "validation": 100
+  },
+  "dataset_repo": "allenai/ai2_arc",
+  "datasets": [
+    "ARC-Challenge",
+    "ARC-Easy"
+  ],
+  "deduplication": {
+    "cross_split": "normalized_question_stem",
+    "priority": [
+      "test",
+      "validation",
+      "train"
+    ],
+    "within_split": "normalized_question_and_unordered_choices"
+  },
+  "ece_bins": 10,
+  "instruction": "Select the best answer to the following multiple-choice question. Reply with only the option letter.",
+  "max_input_tokens": 4096,
+  "models": {
+    "primary": "Qwen/Qwen3-4B",
+    "replication": "Qwen/Qwen3-1.7B"
+  },
+  "name": "quantization-calibration-transfer-v2",
+  "pilot_gate": {
+    "maximum_challenge_accuracy": 0.98,
+    "minimum_above_chance": 0.05,
+    "repeat_probability_atol": 0.0001
+  },
+  "practical_brier_difference": 0.01,
+  "precisions": [
+    16,
+    8,
+    4
+  ],
+  "primary_comparison": {
+    "calibration_n": 400,
+    "dataset": "ARC-Challenge",
+    "difference": "transferred_minus_refitted",
+    "metric": "multiclass_brier_sum",
+    "model": "primary",
+    "precision": 4
+  },
+  "quantization": {
+    "group_size": 64,
+    "mode": "affine",
+    "reference_dtype": "bfloat16"
+  },
+  "schema_version": 2,
+  "seed": 20261005,
+  "temperature_bounds": [
+    0.05,
+    20.0
+  ]
+}

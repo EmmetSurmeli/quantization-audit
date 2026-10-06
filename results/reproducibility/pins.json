@@ -1,0 +1,16 @@
+{
+  "dataset": {
+    "repo": "allenai/ai2_arc",
+    "revision": "210d026faf9955653af8916fad021475a3f00453"
+  },
+  "models": {
+    "primary": {
+      "repo": "Qwen/Qwen3-4B",
+      "revision": "1cfa9a7208912126459214e8b04321603b3df60c"
+    },
+    "replication": {
+      "repo": "Qwen/Qwen3-1.7B",
+      "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e"
+    }
+  }
+}

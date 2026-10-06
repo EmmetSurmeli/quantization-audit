@@ -1,0 +1,292 @@
+{
+  "additional_spend_usd": 0,
+  "phases": [
+    {
+      "finished": "2026-10-06T04:05:55.289291+00:00",
+      "phase": "convert/primary/16",
+      "seconds": 4.3931283748243,
+      "started": "2026-10-06T04:05:50.896181+00:00",
+      "status": "complete"
+    },
+    {
+      "finished": "2026-10-06T04:06:01.038407+00:00",
+      "phase": "pilot/primary/16",
+      "seconds": 5.748669584048912,
+      "started": "2026-10-06T04:05:55.289737+00:00",
+      "status": "complete"
+    },
+    {
+      "finished": "2026-10-06T04:06:02.787532+00:00",
+      "phase": "convert/primary/8",
+      "seconds": 1.7483969582244754,
+      "started": "2026-10-06T04:06:01.039139+00:00",
+      "status": "complete"
+    },
+    {
+      "finished": "2026-10-06T04:06:06.900301+00:00",
+      "phase": "pilot/primary/8",
+      "seconds": 4.112415000097826,
+      "started": "2026-10-06T04:06:02.787885+00:00",
+      "status": "complete"
+    },
+    {
+      "finished": "2026-10-06T04:06:07.856639+00:00",
+      "phase": "convert/primary/4",
+      "seconds": 0.9555718749761581,
+      "started": "2026-10-06T04:06:06.901074+00:00",
+      "status": "complete"
+    },
+    {
+      "finished": "2026-10-06T04:06:11.177257+00:00",
+      "phase": "pilot/primary/4",
+      "seconds": 3.3202458748128265,
+      "started": "2026-10-06T04:06:07.857013+00:00",
+      "status": "complete"
+    },
+    {
+      "finished": "2026-10-06T04:06:11.667104+00:00",
+      "phase": "gate/primary",
+      "seconds": 0.4893816658295691,
+      "started": "2026-10-06T04:06:11.177729+00:00",
+      "status": "complete"
+    },
+    {
+      "finished": "2026-10-06T04:06:16.987542+00:00",
+      "phase": "calibration/primary/16",
+      "seconds": 5.320213333936408,
+      "started": "2026-10-06T04:06:11.667324+00:00",
+      "status": "complete"
+    },
+    {
+      "finished": "2026-10-06T04:06:20.270875+00:00",
+      "phase": "calibration/primary/8",
+      "seconds": 3.2828757921233773,
+      "started": "2026-10-06T04:06:16.988002+00:00",
+      "status": "complete"
+    },
+    {
+      "finished": "2026-10-06T04:06:22.570843+00:00",
+      "phase": "calibration/primary/4",
+      "seconds": 2.2994609579909593,
+      "started": "2026-10-06T04:06:20.271389+00:00",
+      "status": "complete"
+    },
+    {
+      "finished": "2026-10-06T04:06:27.162914+00:00",
+      "phase": "validation/primary/16",
+      "seconds": 4.591610375093296,
+      "started": "2026-10-06T04:06:22.571302+00:00",
+      "status": "complete"
+    },
+    {
+      "finished": "2026-10-06T04:06:29.564393+00:00",
+      "phase": "validation/primary/8",
+      "seconds": 2.400953958975151,
+      "started": "2026-10-06T04:06:27.163445+00:00",
+      "status": "complete"
+    },
+    {
+      "finished": "2026-10-06T04:06:31.036995+00:00",
+      "phase": "validation/primary/4",
+      "seconds": 1.4721507087815553,
+      "started": "2026-10-06T04:06:29.564852+00:00",
+      "status": "complete"
+    },
+    {
+      "finished": "2026-10-06T04:06:31.128193+00:00",
+      "phase": "fit/primary",
+      "seconds": 0.09074804093688726,
+      "started": "2026-10-06T04:06:31.037452+00:00",
+      "status": "complete"
+    },
+    {
+      "finished": "2026-10-06T04:06:32.649742+00:00",
+      "phase": "convert/replication/16",
+      "seconds": 1.5213115839287639,
+      "started": "2026-10-06T04:06:31.128435+00:00",
+      "status": "complete"
+    },
+    {
+      "finished": "2026-10-06T04:06:35.192201+00:00",
+      "phase": "pilot/replication/16",
+      "seconds": 2.542105874978006,
+      "started": "2026-10-06T04:06:32.650119+00:00",
+      "status": "complete"
+    },
+    {
+      "finished": "2026-10-06T04:06:36.003982+00:00",
+      "phase": "convert/replication/8",
+      "seconds": 0.8111991670448333,
+      "started": "2026-10-06T04:06:35.192790+00:00",
+      "status": "complete"
+    },
+    {
+      "finished": "2026-10-06T04:06:38.191720+00:00",
+      "phase": "pilot/replication/8",
+      "seconds": 2.187402875162661,
+      "started": "2026-10-06T04:06:36.004323+00:00",
+      "status": "complete"
+    },
+    {
+      "finished": "2026-10-06T04:06:38.651591+00:00",
+      "phase": "convert/replication/4",
+      "seconds": 0.4594257501885295,
+      "started": "2026-10-06T04:06:38.192173+00:00",
+      "status": "complete"
+    },
+    {
+      "finished": "2026-10-06T04:06:40.386323+00:00",
+      "phase": "pilot/replication/4",
+      "seconds": 1.7343414169736207,
+      "started": "2026-10-06T04:06:38.651988+00:00",
+      "status": "complete"
+    },
+    {
+      "finished": "2026-10-06T04:06:40.817514+00:00",
+      "phase": "gate/replication",
+      "seconds": 0.43073645792901516,
+      "started": "2026-10-06T04:06:40.386783+00:00",
+      "status": "complete"
+    },
+    {
+      "finished": "2026-10-06T04:06:42.804400+00:00",
+      "phase": "calibration/replication/16",
+      "seconds": 1.9866351659875363,
+      "started": "2026-10-06T04:06:40.817770+00:00",
+      "status": "complete"
+    },
+    {
+      "finished": "2026-10-06T04:06:44.327642+00:00",
+      "phase": "calibration/replication/8",
+      "seconds": 1.522801874903962,
+      "started": "2026-10-06T04:06:42.804849+00:00",
+      "status": "complete"
+    },
+    {
+      "finished": "2026-10-06T04:06:45.515543+00:00",
+      "phase": "calibration/replication/4",
+      "seconds": 1.186524375109002,
+      "started": "2026-10-06T04:06:44.329027+00:00",
+      "status": "complete"
+    },
+    {
+      "finished": "2026-10-06T04:06:47.171029+00:00",
+      "phase": "validation/replication/16",
+      "seconds": 1.6550315420608968,
+      "started": "2026-10-06T04:06:45.516004+00:00",
+      "status": "complete"
+    },
+    {
+      "finished": "2026-10-06T04:06:48.208684+00:00",
+      "phase": "validation/replication/8",
+      "seconds": 1.0372359999455512,
+      "started": "2026-10-06T04:06:47.171457+00:00",
+      "status": "complete"
+    },
+    {
+      "finished": "2026-10-06T04:06:48.903730+00:00",
+      "phase": "validation/replication/4",
+      "seconds": 0.6946071670390666,
+      "started": "2026-10-06T04:06:48.209132+00:00",
+      "status": "complete"
+    },
+    {
+      "finished": "2026-10-06T04:06:48.971624+00:00",
+      "phase": "fit/replication",
+      "seconds": 0.06746899988502264,
+      "started": "2026-10-06T04:06:48.904163+00:00",
+      "status": "complete"
+    },
+    {
+      "finished": "2026-10-06T04:07:55.944653+00:00",
+      "phase": "test/primary/16",
+      "seconds": 5.230123624904081,
+      "started": "2026-10-06T04:07:50.714543+00:00",
+      "status": "complete"
+    },
+    {
+      "finished": "2026-10-06T04:18:17.088723+00:00",
+      "phase": "test/primary/8",
+      "seconds": 621.1417694168631,
+      "started": "2026-10-06T04:07:55.945364+00:00",
+      "status": "complete"
+    },
+    {
+      "finished": "2026-10-06T04:32:07.199011+00:00",
+      "phase": "test/primary/4",
+      "seconds": 830.0985466670245,
+      "started": "2026-10-06T04:18:17.092517+00:00",
+      "status": "complete"
+    },
+    {
+      "finished": "2026-10-06T04:33:31.652389+00:00",
+      "phase": "robustness/primary/16",
+      "seconds": 84.4515678328462,
+      "started": "2026-10-06T04:32:07.200432+00:00",
+      "status": "complete"
+    },
+    {
+      "finished": "2026-10-06T04:35:13.191976+00:00",
+      "phase": "robustness/primary/8",
+      "seconds": 101.53838424989954,
+      "started": "2026-10-06T04:33:31.653122+00:00",
+      "status": "complete"
+    },
+    {
+      "finished": "2026-10-06T04:36:54.065348+00:00",
+      "phase": "robustness/primary/4",
+      "seconds": 100.87039349996485,
+      "started": "2026-10-06T04:35:13.194494+00:00",
+      "status": "complete"
+    },
+    {
+      "finished": "2026-10-06T04:41:38.549489+00:00",
+      "phase": "test/replication/16",
+      "seconds": 284.4823096669279,
+      "started": "2026-10-06T04:36:54.065872+00:00",
+      "status": "complete"
+    },
+    {
+      "finished": "2026-10-06T04:48:59.733670+00:00",
+      "phase": "test/replication/8",
+      "seconds": 441.18083654204383,
+      "started": "2026-10-06T04:41:38.550762+00:00",
+      "status": "complete"
+    },
+    {
+      "finished": "2026-10-06T04:55:32.421364+00:00",
+      "phase": "test/replication/4",
+      "seconds": 392.68529254198074,
+      "started": "2026-10-06T04:48:59.734225+00:00",
+      "status": "complete"
+    },
+    {
+      "finished": "2026-10-06T04:56:05.448146+00:00",
+      "phase": "robustness/replication/16",
+      "seconds": 33.02592020784505,
+      "started": "2026-10-06T04:55:32.422088+00:00",
+      "status": "complete"
+    },
+    {
+      "finished": "2026-10-06T04:56:57.008513+00:00",
+      "phase": "robustness/replication/8",
+      "seconds": 51.55929429200478,
+      "started": "2026-10-06T04:56:05.448990+00:00",
+      "status": "complete"
+    },
+    {
+      "finished": "2026-10-06T04:57:43.799254+00:00",
+      "phase": "robustness/replication/4",
+      "seconds": 46.78990020812489,
+      "started": "2026-10-06T04:56:57.009145+00:00",
+      "status": "complete"
+    },
+    {
+      "finished": "2026-10-06T04:57:57.116795+00:00",
+      "phase": "analyze",
+      "seconds": 13.316115875029936,
+      "started": "2026-10-06T04:57:43.800623+00:00",
+      "status": "complete"
+    }
+  ]
+}

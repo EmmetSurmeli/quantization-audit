@@ -1,0 +1,26 @@
+{
+  "contains_weights": false,
+  "files": {
+    "amendment-heldout-migration.json": "b26ce20a9bfcd2c5924f9d7d17f53e26d5c69505f970dc9bbdbfc0f7fdd6b2e5",
+    "amendment-pretest-migration.json": "a530a1c2c231490187e15c990119878b4104c118f78d8c4d604bf384dac2bc41",
+    "calibration-primary.json": "6954db987b233cb1e1f9cf523b62fc855fda08bf82923f6489d23a0210ed2bcc",
+    "calibration-replication.json": "01577d10171dcceb1a5547c2a787ce9ad29698f317da2acdc832266f243e5f38",
+    "execution.json": "8bab80f5eb2249ea7d6a0e2402ad7a2d01175d9b411b52f4e70dfc82c98d213c",
+    "frozen.json": "704ddd1bd56e4cf8e76cc1605551219562f830cf3d14587b642defd5281d9989",
+    "hardware.json": "82157b67277f70de407e6887a89ec5543f5c28601b0c60c136221a055f7ac3cb",
+    "models/primary/16/artifact.json": "b2c9ed720dcdf89e9069a92dda59adea3263a51f604d523add75e6fd5903cf70",
+    "models/primary/4/artifact.json": "022d31de629c681e1c7149bd3b3827fd81cf3ea6f25c78ca60ab6124cf6f21c4",
+    "models/primary/8/artifact.json": "f398b380845a64ae018c1df6138476e90bd15a90915b41ad39d1e7ae6f377c72",
+    "models/replication/16/artifact.json": "f67f698f4db77d4e89c01532e834dc7f4a3164d7afca311b5dce795f9f4b730f",
+    "models/replication/4/artifact.json": "4d1146b2f28845b382c6f9fed568b87e6369de514a4048cb21c59dcf03d512d7",
+    "models/replication/8/artifact.json": "69c8150659cd8085592415d349fadddccdf88266504700267793da524f0c2c75",
+    "pilot-primary.json": "116582a713fd0897293de83e93ff3ca62e35eebde5ab86b69e9a32ec117c1a17",
+    "pilot-replication.json": "6f47b804957709b199792e65ee2c46d5e9d61bb703110d1e9404ee4c67e1bea3",
+    "pins.json": "8fd7f8a7e37811a949bbfe43474bbe975378cc3e5c9244b0b86fa77ca2218b0e",
+    "scores.sqlite.gz": "a5af7d9f7bd300a3fca0d8809cbcb4073d5294680fb88cd0cbaed34bc2c58653",
+    "split-manifest.json": "641f0544fb9edd49879f0e67a2cc94eb1cad99f92c251b63ce7b9c41b9d40132",
+    "splits.json": "6eb16dc2b56a92c7c336c20eab308b02f2119c4e5e9aafb853ae9b983ab7d4d5",
+    "study.json": "1de1f03e743b944d60046b7c6c3f820d4f129744dd6d83aa867b593a10a9fdc1"
+  },
+  "schema": 1
+}

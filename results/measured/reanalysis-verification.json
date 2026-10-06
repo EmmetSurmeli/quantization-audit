@@ -1,0 +1,66 @@
+{
+  "archive_manifest_sha256": "9af9198d749e06280a7495634cb2897e440bb9165667c50175f4551f8ad45892",
+  "equal_result_fields": {
+    "details": true,
+    "error_cases": true,
+    "flips": true,
+    "limitations": true,
+    "metrics": true,
+    "primary": true,
+    "protocol": true,
+    "resources": true,
+    "robustness": true,
+    "sample_size_curves": true,
+    "split_amendment": true,
+    "status": true
+  },
+  "excluded_metadata_fields": [
+    "analysis_environment",
+    "analysis_source"
+  ],
+  "method": "Restore the published weight-free archive to an empty workspace; rerun analysis and audit without model inference or GPU access. Compare every result field except separately recorded analysis source and environment.",
+  "model_weights_loaded": false,
+  "passed": true,
+  "restored_archive_audit": {
+    "checks_count": 472,
+    "input_token_evaluations": 2670786,
+    "measured_scoring_seconds": 4538.123252750607,
+    "passed": true,
+    "quantization_coverage": [
+      {
+        "bits": 16,
+        "model": "primary",
+        "quantized_modules": 0
+      },
+      {
+        "bits": 8,
+        "model": "primary",
+        "quantized_modules": 253
+      },
+      {
+        "bits": 4,
+        "model": "primary",
+        "quantized_modules": 253
+      },
+      {
+        "bits": 16,
+        "model": "replication",
+        "quantized_modules": 0
+      },
+      {
+        "bits": 8,
+        "model": "replication",
+        "quantized_modules": 197
+      },
+      {
+        "bits": 4,
+        "model": "replication",
+        "quantized_modules": 197
+      }
+    ],
+    "reused_unchanged_records": 11340,
+    "scope": "Actual completed archive; immutable artifact manifests are verified, but weights are not reloaded.",
+    "scoring_records": 30888,
+    "warmups_and_repeatability_passes_excluded": true
+  }
+}

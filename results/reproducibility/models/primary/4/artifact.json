@@ -1,0 +1,1586 @@
+{
+  "artifact_hash": "d8f2d5499dc36f18194352af0a47298722b9e2062b4e3cf66152bcb1fc52ee1c",
+  "environment": {
+    "machine": "arm64",
+    "packages": {
+      "datasets": "4.8.5",
+      "huggingface-hub": "1.32.0",
+      "matplotlib": "3.10.8",
+      "mlx": "0.32.3",
+      "mlx-lm": "0.31.3",
+      "numpy": "2.4.3",
+      "quantization-audit": "0.1.0",
+      "scipy": "1.17.1",
+      "transformers": "5.18.0"
+    },
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "python": "3.13.5"
+  },
+  "files": {
+    "README.md": {
+      "bytes": 81,
+      "sha256": "748c964f9b7e5f2c3770ce013bbc0153be7c54311d9692c343b6188eefe77ac6"
+    },
+    "chat_template.jinja": {
+      "bytes": 4168,
+      "sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8"
+    },
+    "config.json": {
+      "bytes": 1021,
+      "sha256": "cd08d43fc6f59e643b58b114d308a29bbd4ca147d30df6f419fcbe3115dcc2dd"
+    },
+    "generation_config.json": {
+      "bytes": 239,
+      "sha256": "2325da0f15bb848e018c5ae071b7943332e9f871d6b60e2ed22ca97d4cb993d2"
+    },
+    "model.safetensors": {
+      "bytes": 2263022417,
+      "sha256": "365a6fff57490ca4e89e354c3295b7f2f60ac3fcb0a8a3fa06e21b80bb4d19ca"
+    },
+    "model.safetensors.index.json": {
+      "bytes": 63964,
+      "sha256": "388d811b8b7c2608dd04cce1bcb04a8bf715d19b42790894e6d3427ff429a777"
+    },
+    "tokenizer.json": {
+      "bytes": 11422650,
+      "sha256": "be75606093db2094d7cd20f3c2f385c212750648bd6ea4fb2bf507a6a4c55506"
+    },
+    "tokenizer_config.json": {
+      "bytes": 729,
+      "sha256": "ee8f6d44bf2353e6d3686c3adaf70e1ccfe9e6ed6822d0ab2f28cafdd7754792"
+    }
+  },
+  "quantized_modules": [
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.35.mlp.up_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.35.mlp.down_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.35.mlp.gate_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.35.self_attn.o_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.35.self_attn.v_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.35.self_attn.k_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.35.self_attn.q_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.34.mlp.up_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.34.mlp.down_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.34.mlp.gate_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.34.self_attn.o_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.34.self_attn.v_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.34.self_attn.k_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.34.self_attn.q_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.33.mlp.up_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.33.mlp.down_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.33.mlp.gate_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.33.self_attn.o_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.33.self_attn.v_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.33.self_attn.k_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.33.self_attn.q_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.32.mlp.up_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.32.mlp.down_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.32.mlp.gate_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.32.self_attn.o_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.32.self_attn.v_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.32.self_attn.k_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.32.self_attn.q_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.31.mlp.up_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.31.mlp.down_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.31.mlp.gate_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.31.self_attn.o_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.31.self_attn.v_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.31.self_attn.k_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.31.self_attn.q_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.30.mlp.up_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.30.mlp.down_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.30.mlp.gate_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.30.self_attn.o_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.30.self_attn.v_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.30.self_attn.k_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.30.self_attn.q_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.29.mlp.up_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.29.mlp.down_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.29.mlp.gate_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.29.self_attn.o_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.29.self_attn.v_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.29.self_attn.k_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.29.self_attn.q_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.28.mlp.up_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.28.mlp.down_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.28.mlp.gate_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.28.self_attn.o_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.28.self_attn.v_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.28.self_attn.k_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.28.self_attn.q_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.27.mlp.up_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.27.mlp.down_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.27.mlp.gate_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.27.self_attn.o_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.27.self_attn.v_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.27.self_attn.k_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.27.self_attn.q_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.26.mlp.up_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.26.mlp.down_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.26.mlp.gate_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.26.self_attn.o_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.26.self_attn.v_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.26.self_attn.k_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.26.self_attn.q_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.25.mlp.up_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.25.mlp.down_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.25.mlp.gate_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.25.self_attn.o_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.25.self_attn.v_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.25.self_attn.k_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.25.self_attn.q_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.24.mlp.up_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.24.mlp.down_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.24.mlp.gate_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.24.self_attn.o_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.24.self_attn.v_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.24.self_attn.k_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.24.self_attn.q_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.23.mlp.up_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.23.mlp.down_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.23.mlp.gate_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.23.self_attn.o_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.23.self_attn.v_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.23.self_attn.k_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.23.self_attn.q_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.22.mlp.up_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.22.mlp.down_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.22.mlp.gate_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.22.self_attn.o_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.22.self_attn.v_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.22.self_attn.k_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.22.self_attn.q_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.21.mlp.up_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.21.mlp.down_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.21.mlp.gate_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.21.self_attn.o_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.21.self_attn.v_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.21.self_attn.k_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.21.self_attn.q_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.20.mlp.up_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.20.mlp.down_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.20.mlp.gate_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.20.self_attn.o_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.20.self_attn.v_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.20.self_attn.k_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.20.self_attn.q_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.19.mlp.up_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.19.mlp.down_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.19.mlp.gate_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.19.self_attn.o_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.19.self_attn.v_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.19.self_attn.k_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.19.self_attn.q_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.18.mlp.up_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.18.mlp.down_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.18.mlp.gate_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.18.self_attn.o_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.18.self_attn.v_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.18.self_attn.k_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.18.self_attn.q_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.17.mlp.up_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.17.mlp.down_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.17.mlp.gate_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.17.self_attn.o_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.17.self_attn.v_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.17.self_attn.k_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.17.self_attn.q_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.16.mlp.up_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.16.mlp.down_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.16.mlp.gate_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.16.self_attn.o_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.16.self_attn.v_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.16.self_attn.k_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.16.self_attn.q_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.15.mlp.up_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.15.mlp.down_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.15.mlp.gate_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.15.self_attn.o_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.15.self_attn.v_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.15.self_attn.k_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.15.self_attn.q_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.14.mlp.up_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.14.mlp.down_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.14.mlp.gate_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.14.self_attn.o_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.14.self_attn.v_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.14.self_attn.k_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.14.self_attn.q_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.13.mlp.up_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.13.mlp.down_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.13.mlp.gate_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.13.self_attn.o_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.13.self_attn.v_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.13.self_attn.k_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.13.self_attn.q_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.12.mlp.up_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.12.mlp.down_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.12.mlp.gate_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.12.self_attn.o_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.12.self_attn.v_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.12.self_attn.k_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.12.self_attn.q_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.11.mlp.up_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.11.mlp.down_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.11.mlp.gate_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.11.self_attn.o_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.11.self_attn.v_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.11.self_attn.k_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.11.self_attn.q_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.10.mlp.up_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.10.mlp.down_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.10.mlp.gate_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.10.self_attn.o_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.10.self_attn.v_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.10.self_attn.k_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.10.self_attn.q_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.9.mlp.up_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.9.mlp.down_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.9.mlp.gate_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.9.self_attn.o_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.9.self_attn.v_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.9.self_attn.k_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.9.self_attn.q_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.8.mlp.up_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.8.mlp.down_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.8.mlp.gate_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.8.self_attn.o_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.8.self_attn.v_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.8.self_attn.k_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.8.self_attn.q_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.7.mlp.up_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.7.mlp.down_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.7.mlp.gate_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.7.self_attn.o_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.7.self_attn.v_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.7.self_attn.k_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.7.self_attn.q_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.6.mlp.up_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.6.mlp.down_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.6.mlp.gate_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.6.self_attn.o_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.6.self_attn.v_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.6.self_attn.k_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.6.self_attn.q_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.5.mlp.up_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.5.mlp.down_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.5.mlp.gate_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.5.self_attn.o_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.5.self_attn.v_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.5.self_attn.k_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.5.self_attn.q_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.4.mlp.up_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.4.mlp.down_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.4.mlp.gate_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.4.self_attn.o_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.4.self_attn.v_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.4.self_attn.k_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.4.self_attn.q_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.3.mlp.up_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.3.mlp.down_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.3.mlp.gate_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.3.self_attn.o_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.3.self_attn.v_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.3.self_attn.k_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.3.self_attn.q_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.2.mlp.up_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.2.mlp.down_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.2.mlp.gate_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.2.self_attn.o_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.2.self_attn.v_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.2.self_attn.k_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.2.self_attn.q_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.1.mlp.up_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.1.mlp.down_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.1.mlp.gate_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.1.self_attn.o_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.1.self_attn.v_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.1.self_attn.k_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.1.self_attn.q_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.0.mlp.up_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.0.mlp.down_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.0.mlp.gate_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.0.self_attn.o_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.0.self_attn.v_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.0.self_attn.k_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedLinear",
+      "group_size": 64,
+      "name": "model.layers.0.self_attn.q_proj"
+    },
+    {
+      "bits": 4,
+      "class": "QuantizedEmbedding",
+      "group_size": 64,
+      "name": "model.embed_tokens"
+    }
+  ],
+  "serialized_bytes": 2274515269,
+  "spec": {
+    "bits": 4,
+    "pin": {
+      "repo": "Qwen/Qwen3-4B",
+      "revision": "1cfa9a7208912126459214e8b04321603b3df60c"
+    },
+    "quantization": {
+      "group_size": 64,
+      "mode": "affine",
+      "reference_dtype": "bfloat16"
+    }
+  }
+}

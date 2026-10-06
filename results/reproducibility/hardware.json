@@ -1,0 +1,8 @@
+{
+  "additional_spend_usd": 0,
+  "chip": "Apple M5",
+  "measurement": "single model, batch size one, no persistent KV cache; peak is MLX allocation, not system resident memory",
+  "memory_bytes": 25769803776,
+  "metal_recommended_working_set_bytes": 19069665280,
+  "os": "macOS-26.6.2-arm64-arm-64bit-Mach-O"
+}

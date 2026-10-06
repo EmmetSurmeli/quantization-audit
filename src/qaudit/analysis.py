@@ -160,6 +160,16 @@ def analyze(workspace,out):
                 "Secondary comparisons and option permutations are exploratory."]}
     for name,rows in (("metrics",metric_rows),("sample-size",curves),("prediction-changes",flips),("resources",resources),("robustness",robust)):
         csv_write(out/f"{name}.csv",rows)
+    reliability_rows=[];selective_rows=[]
+    for key,m in details.items():
+        role,bits,dataset,stage,treatment=key.split('/')
+        identity={'model':role,'bits':int(bits),'dataset':dataset,'treatment':treatment,'test_n':m['n']}
+        reliability_rows.extend(dict(identity,**row) for row in m['reliability'])
+        for row in m['selective']:
+            row=dict(row);low,high=row.pop('error_rate_ci95')
+            selective_rows.append(dict(identity,**row,error_ci_low=low,error_ci_high=high))
+    csv_write(out/'reliability-bins.csv',reliability_rows)
+    csv_write(out/'selective-answering.csv',selective_rows)
     write_json(out/"results.json",result)
     write_json(out/"error-cases.json",examples)
     make_figures(result,out)
@@ -215,11 +225,18 @@ def make_figures(result,out):
         for t in colors:
             points=result["details"][f"primary/4/{d}/test/{t}"]["selective"]
             points=[p for p in points if p["answered"]]
-            ax.plot([p["coverage"] for p in points],[p["error_rate"] for p in points],"o-",label=t,color=colors[t])
+            ax.plot([p["coverage"] for p in points],[p["error_rate"] for p in points],"-",label=t,color=colors[t])
             for p in points:
-                ax.annotate(str(p["threshold"]),(p["coverage"],p["error_rate"]),fontsize=7)
+                marker={0.5:"o",0.7:"s",0.9:"^"}[p["threshold"]]
+                ax.plot(p["coverage"],p["error_rate"],marker=marker,color=colors[t],linestyle="none",markersize=5)
         ax.set(title=f"4-bit · {d}",xlabel="Coverage",ylabel="Error among answered questions",xlim=(0,1))
         ax.legend(fontsize=8)
+    from matplotlib.lines import Line2D
+    treatment_legend=axes[1].get_legend()
+    axes[1].add_artist(treatment_legend)
+    axes[1].legend(handles=[Line2D([],[],color="0.4",marker=m,linestyle="none",label=str(t))
+                           for t,m in [(0.5,"o"),(0.7,"s"),(0.9,"^")]],
+                   title="Confidence threshold",loc="lower left",fontsize=8,title_fontsize=8)
     fig.suptitle("Prespecified confidence thresholds; not optimized on test data",fontsize=10)
     fig.savefig(out/"figure-4-coverage-error.png",dpi=180);plt.close(fig)
 

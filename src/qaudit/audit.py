@@ -15,6 +15,8 @@ def audit(workspace,out):
     ws=Path(workspace);cfg=config_at(ws)
     frozen=read_json(ws/'frozen.json');splits=read_json(ws/'splits.json');pins=read_json(ws/'pins.json')
     checks=[];observations=0;input_tokens=0;modules=[];score_seconds=0.0
+    reuse_protocols={digest(read_json(p)['source_protocol']) for p in ws.glob('amendment-*-migration.json')}
+    reused_records=0
     def check(name,passed):
         checks.append({'check':name,'passed':bool(passed)})
     seen_keys=set();seen_content=set()
@@ -53,6 +55,14 @@ def audit(workspace,out):
                               (identity['role'],identity['bits'],identity['stage'],identity['dataset'])==(role,b,stage,d))
                         if reference is not None: assert_paired(reference,records)
                         reference=records
+                        valid_reuse=True
+                        for record in records:
+                            if 'reused_from' not in record: continue
+                            reused_records+=1
+                            original=dict(record);origin=original.pop('reused_from')
+                            valid_reuse &= (origin['protocol_hash'] in reuse_protocols and origin['cell']==name and
+                                            origin['record_hash']==digest(original))
+                        check(f'Reused raw-score integrity: {name}',valid_reuse)
                         p=probabilities(x)
                         check(f'Valid probabilities: {name}',np.isfinite(p).all() and np.allclose(p.sum(axis=1),1,atol=1e-12))
                         check(f'No truncation / valid diagnostics: {name}',all(0<r['input_tokens']<=cfg['max_input_tokens'] and 0<=r['outside_option_mass']<=1 and r['latency_seconds']>0 for r in records))
@@ -68,6 +78,7 @@ def audit(workspace,out):
                         score_seconds+=sum(r['latency_seconds'] for r in records)
     result={'passed':all(x['passed'] for x in checks),'checks':checks,'checks_count':len(checks),
             'scoring_records':observations,'input_token_evaluations':input_tokens,'measured_scoring_seconds':score_seconds,
+            'reused_unchanged_records':reused_records,
             'quantization_coverage':modules,'warmups_and_repeatability_passes_excluded':True,
             'scope':'Actual completed archive; immutable artifact manifests are verified, but weights are not reloaded.'}
     write_json(out,result)

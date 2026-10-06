@@ -6,6 +6,7 @@ Held-out reuse requires the corrected protocol to be frozen first.
 from __future__ import annotations
 
 import argparse
+import ast
 import hashlib
 import subprocess
 from pathlib import Path
@@ -28,6 +29,14 @@ def migrate(source,destination,old_commit,phase):
         old_hashes[name+'.py']=hashlib.sha256(blob).hexdigest()
         if name!='data' and old_hashes[name+'.py']!=file_hash(repo/'src'/'qaudit'/f'{name}.py'):
             raise ValueError('Only data selection may change in this migration')
+        if name=='data':
+            # In particular, canonical mapping and option permutation must match.
+            def without_selection(text):
+                tree=ast.parse(text)
+                tree.body=[node for node in tree.body if not(isinstance(node,ast.FunctionDef) and node.name=='build_splits')]
+                return ast.dump(tree,include_attributes=False)
+            if without_selection(blob.decode())!=without_selection((repo/'src/qaudit/data.py').read_text()):
+                raise ValueError('Data code changed beyond the split-selection function')
     if digest(old_hashes)!=old['scoring_source']:
         raise ValueError('The supplied commit does not match the original scoring code')
     old_cfg=config_at(source);new_cfg=config_at(destination)

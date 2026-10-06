@@ -6,18 +6,34 @@ A controlled audit of whether confidence calibration transfers from an unquantiz
 
 This is an applied replication and extension, not a new quantization algorithm. It evaluates **closed-choice probability quality**, not open-ended reasoning or hallucination rates. Temperature scaling does not improve answer accuracy because it preserves the highest-scoring option.
 
+**Protocol disclosure:** a data-only [amendment](docs/PROTOCOL-AMENDMENT.md) tightened cross-split question-stem checks after scoring began but before any held-out performance review. The original freeze, corrected freeze, and per-record reuse provenance are preserved.
+
+## Measured finding
+
+**Refitting made little practical difference in the primary comparison.** On Qwen3-4B / ARC-Challenge / 4-bit, using 400 calibration examples, transferred Brier was **0.22517** and refitted Brier was **0.22342**. The improvement was **0.00175**, with a 95% paired bootstrap interval of **[-0.00390, 0.00828]**, entirely within the prespecified ±0.01 practical margin. This is a bounded result for these settings, not universal equivalence.
+
+Four-bit conversion reduced the primary model's serialized size from 8.056 GB to 2.275 GB, but Challenge accuracy fell from 87.71% to 84.98%, and measured scoring was slower on this host. Temperature scaling cannot repair those answer changes.
+
+The full two-model study is complete: **30,888 real scoring records**, four principal figures, a six-page report, a 20-case qualitative review, and a weight-free reproducibility archive. All **19 software tests** and **472 archive checks** pass. Restoring the archive reproduced every saved numerical analysis field without loading model weights. Additional spending was **$0**.
+
+- [Six-page technical report](results/measured/technical-report.pdf)
+- [Results and four figures](results/measured/REPORT.md)
+- [Claim-by-claim evidence guide](results/measured/CLAIM-AUDIT.md)
+- [Qualitative case review](results/measured/error-review.md)
+- [Portable scores and provenance](results/reproducibility/)
+
 ## Study
 
 - Primary: Qwen3-4B / ARC-Challenge / 4-bit / 400 calibration examples.
-- Replication: Qwen3-1.7B and ARC-Easy, subject to the runtime gate.
+- Replication: Qwen3-1.7B and ARC-Easy; both models passed the runtime gate and were completed.
 - Intervention: MLX affine weight quantization, group size 64, identical source checkpoint and backend.
 - Treatments: raw, transferred BF16 temperature, refitted temperature, and a uniform-probability reference.
 - Primary endpoint: transferred minus refitted multiclass Brier score; positive favors refitting.
 - Uncertainty: paired question bootstrap, independently resampling calibration and test sets and refitting temperatures in every replicate.
 - Practical threshold: 0.01 absolute Brier score, on the sum-of-squares definition (range 0–2).
-- Scope: two related ARC subsets and at most two sizes from one model family. No claim of universal calibration transfer.
+- Scope: two related ARC subsets and two sizes from one model family. No claim of universal calibration transfer.
 
-See [the protocol](docs/PROTOCOL.md), [research context](docs/LITERATURE.md), and [interview guide](docs/OWNERSHIP.md). The execution status and measured outputs, when available, are in [results](results/STATUS.md).
+See [the protocol](docs/PROTOCOL.md), [research context](docs/LITERATURE.md), and [interview guide](docs/OWNERSHIP.md). See the [completed execution status](results/STATUS.md).
 
 ## Install
 
@@ -90,6 +106,8 @@ qaudit --workspace workspaces/reanalysis audit --out results/reanalysis/acceptan
 The archive verifies file checksums before restoration. Reanalysis verifies frozen data and calibration, and records its own software environment; it does not require the original Mac or MLX installation. Resume scoring still requires an exact match to the frozen scoring environment.
 
 The final six-page PDF is built from measured outputs with `python scripts/build_report.py --results results/measured --provenance results/pretest` (requires `reportlab` and `pypdf`). Its page count is checked automatically; rendered pages are also reviewed before delivery. The report builder refuses non-measured input.
+
+Regenerate the qualitative review with `python scripts/build_case_review.py --cases results/measured/error-cases.json --notes docs/case-notes.json --out results/measured/error-review.md`. The script verifies that reviewed cases and predictions match the saved annotations before applying them.
 
 `analyze` produces machine-readable results, CSV tables, four PNG figures, stratified error cases, and a Markdown report. Bootstrap confidence intervals incorporate calibration-fit uncertainty. Ten calibration subsets are sensitivity checks, not independent test sets. At 400 examples they coincide and are evaluated once.
 
